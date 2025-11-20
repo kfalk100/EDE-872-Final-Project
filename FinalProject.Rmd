@@ -1,0 +1,36 @@
+---
+title: "FinalProject_KLF_TLB_SCB"
+author: "Kyle Falk, Trisha Belus, Sean Burke"
+date: "2025-11-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r / Install Packages & Establish Working Directory}
+
+
+
+```
+
+```{r / Set Environment}
+
+
+
+```
+
+``` {r / Data Exploration}
+
+
+
+```
+
+``` {r / }
+
+
+
+```
+
+
