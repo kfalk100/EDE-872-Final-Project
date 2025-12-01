@@ -3,6 +3,8 @@ title: "FinalProject_KLF_TLB_SCB"
 author: "Kyle Falk, Trisha Belus, Sean Burke"
 date: "2025-11-20"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -10,8 +12,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r / Install Packages & Establish Working Directory}
-
-
+install.packages("lubridate")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("mapview")
+install.packages("")
+install.packages("here")
 
 ```
 
@@ -21,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
-``` {r / Data Exploration}
+``` {r / }
 
 
 
