@@ -1,0 +1,93 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r, packages, working directory}
+
+library(tidyverse)
+library (lubridate)
+library(here)
+library(ggplot2)
+
+here()
+getwd()
+
+```
+
+
+```{r, import the two raw data csv}
+
+pointcount_detection <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_2315071_PointCount.csv"))
+
+```
+
+```{r, change date objects}
+
+pointcount_detection$Start_Date_ISO <- ymd(pointcount_detection$Start_Date_ISO)
+class(pointcount_detection$Start_Date_ISO)
+
+```
+
+```{r, select columns of interest}
+
+pointcount_detection_trim <- select(pointcount_detection,
+                          Unit_Code,
+                          Site_Name,
+                          Start_Date_ISO,
+                          Observer_Initials,
+                          Ambient_Noise,
+                          Road_Noise,
+                          Common_Name,
+                          Hemlock_Condition_Score,
+                          )
+
+```
+
+```{r, get rid of unidentified or absent birds, 839 unidentified and 25 no birds spotted}
+
+detection_final <- pointcount_detection_trim %>%
+  filter(!Common_Name %in% c("Unidentified Bird",
+                             "Unidentified Woodpecker",
+                             "Not Applicable"))
+
+```
+
+```{r, filter dataframe for only woodpeckers. Group by location, site, date, observer ambient noise, road noise, and hemlock condition to see how many of each grouping occurs over time}
+
+woodpeckers_detection <- detection_final %>%
+  filter(Common_Name %in% c("Downy Woodpecker",
+                            "Pileated Woodpecker",
+                            "Red-bellied Woodpecker",
+                            "Hairy Woodpecker")) %>%
+                      group_by(Unit_Code,
+                             Site_Name,
+                             Start_Date_ISO,
+                             Observer_Initials,
+                             Common_Name,
+                             Ambient_Noise,
+                             Road_Noise,
+                             Hemlock_Condition_Score) %>%
+                    summarise(count = n())
+                   
+```
+
+```{r, changing column names for clarity}
+woodpeckers_detection<-woodpeckers_detection %>%
+  rename(National_Park = Unit_Code) %>%
+  rename(Detection_Date = Start_Date_ISO) %>%
+  rename(Detection_Count = count)
+
+```
+
+```{r, place the processed dataset into the processed folder}
+
+write.csv(woodpeckers_detection, row.names = FALSE, 
+          file = here("Data","Processed","Woodpeckers_Detection.csv"))
+
+```
+
+
+
+```
+
