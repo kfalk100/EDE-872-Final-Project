@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="ERMN_StreamsideBirds_2315071" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="unknown">
+  <dataset>
+    <alternateIdentifier>doi: https://doi.org/10.57830/2315071</alternateIdentifier>
+    <title>Streamside Bird Monitoring Data in Eastern Rivers and Mountains Network Parks (2011-2025) Data Package</title>
+    <creator>
+      <individualName>
+        <givenName>Matthew</givenName>
+        <surName>Marshall</surName>
+      </individualName>
+      <organizationName>Eastern Rivers and Mountains Network, National Park Service</organizationName>
+      <electronicMailAddress>matt_marshall@nps.gov</electronicMailAddress>
+	  <userId directory="https://orcid.org">https://orcid.org/0009-0009-9771-4360</userId>
+    </creator>
+    <metadataProvider>
+      <organizationName>ERMN</organizationName>
+	  <onlineUrl>https://www.nps.gov/im/ermn/index.htm</onlineUrl>
+    </metadataProvider>
+    <pubDate>2025-08-05</pubDate>
+    <language>eng</language>
+    <abstract>
+      <para>This data package contains records and metadata of avian point count data that were collected in six National Park Service units as part of the Eastern Rivers and Mountains Network Streamside Bird Monitoring Protocol. Data were collected between 2011 and 2025. The point counts were conducted by paid technicians during May and June of the inclusive years. Multiple sites per park were sampled each year and each site consisted of 3 point count stations. Sites were typically sampled four times each year. During point counts, the following information for each individual bird detected was recorded: 1) species identity, 2) type of detection (e.g., song, calls or chips, visual), 3) the distance band of first detection (≤ 50 m, 51 – 75 m, or &gt; 75 m of the point count station), 4) each 1 min interval the bird was detected, 5) if the bird was a juvenile, and 6) if the bird was flying over the canopy at the time of detection. Point count length was 10 minutes. The streamside bird monitoring protocol consists of a narrative, standard operating procedures, and a quality assurance plan that outline the rationale, objectives, sampling design, data quality evaluation, and other specific aspects of the monitoring protocol.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>Appalachia</keyword>
+      <keyword>point count</keyword>
+      <keyword>birds</keyword>
+      <keyword>ALPO</keyword>
+      <keyword>Allegheny Portage Railroad National Historic Site</keyword>
+      <keyword>BLUE</keyword>
+      <keyword>Bluestone National Scenic River</keyword>
+      <keyword>DEWA</keyword>
+      <keyword>Delaware Water Gap National Recreation Area</keyword>
+      <keyword>FONE</keyword>
+      <keyword>Fort Necessity National Battlefield</keyword>
+      <keyword>FRHI</keyword>
+      <keyword>Friendship Hill National Historic Site</keyword>
+      <keyword>New River Gorge National Park and Preserve</keyword>
+      <keyword>ERMN</keyword>
+      <keyword>Eastern Rivers and Mountains Network</keyword>
+      <keyword>IMD</keyword>
+      <keyword>Inventory and Monitoring Division</keyword>
+      <keyword>NPS</keyword>
+      <keyword>National Park Service</keyword>
+      <keyword>GARI</keyword>
+      <keyword>Gauley River National Recreation Area</keyword>
+      <keyword>JOFL</keyword>
+      <keyword>Johnstown Flood National Memorial</keyword>
+      <keyword>NERI none</keyword>
+      <keyword>UPDE</keyword>
+      <keyword>Upper Delaware Scenic and Recreational River</keyword>
+	  <keywordThesaurus>none</keywordThesaurus>
+    </keywordSet>
+    <additionalInfo>
+	  <para>This data package adds 2025 data to and replaces the previously released data package: https://doi.org/10.57830/2306154 </para>
+      <para>Marshall, M., C. Tzilkowski, and K. Callahan. 2016. Streamside bird monitoring protocol for the Eastern Rivers and Mountains Network: Protocol narrative version 3.0. Natural Resource Report NPS/ERMN/NRR—2016/1224. National Park Service, Fort Collins, Colorado.&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2229775</para>
+      <para>Marshall, M., and K. Callahan. 2018. Streamside bird monitoring protocol for the Eastern Rivers and Mountains Network: Quality assurance plan version 1.0. Natural Resource Report NPS/ERMN/NRR—2018/1772. National Park Service, Fort Collins, Colorado.&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2256769</para>
+      <para>ERMN Streamside Bird Monitoring Project&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2227638</para>
+    </additionalInfo>
+    <intellectualRights>This product is released to the "public domain" under U.S. Government Works No Rights Reserved (see: http://www.usa.gov/publicdomain/label/1.0/).</intellectualRights>
+    <licensed>
+      <licenseName>Public Domain</licenseName>
+    </licensed>
+    <coverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: ALPO</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-78.8601</westBoundingCoordinate>
+          <eastBoundingCoordinate>-78.4521</eastBoundingCoordinate>
+          <northBoundingCoordinate>40.4656</northBoundingCoordinate>
+          <southBoundingCoordinate>40.3561</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: BLUE</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-81.03</westBoundingCoordinate>
+          <eastBoundingCoordinate>-80.9383</eastBoundingCoordinate>
+          <northBoundingCoordinate>37.6044</northBoundingCoordinate>
+          <southBoundingCoordinate>37.5172</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: DEWA</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-75.3664</westBoundingCoordinate>
+          <eastBoundingCoordinate>-74.7459</eastBoundingCoordinate>
+          <northBoundingCoordinate>41.3463</northBoundingCoordinate>
+          <southBoundingCoordinate>40.9336</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: FONE</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-79.646</westBoundingCoordinate>
+          <eastBoundingCoordinate>-79.5741</eastBoundingCoordinate>
+          <northBoundingCoordinate>39.8809</northBoundingCoordinate>
+          <southBoundingCoordinate>39.8014</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: FRHI</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-79.9342</westBoundingCoordinate>
+          <eastBoundingCoordinate>-79.9126</eastBoundingCoordinate>
+          <northBoundingCoordinate>39.7864</northBoundingCoordinate>
+          <southBoundingCoordinate>39.7605</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage system="content unit link">
+        <geographicDescription>NPS Content Unit Link: NERI</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-81.1565</westBoundingCoordinate>
+          <eastBoundingCoordinate>-80.8562</eastBoundingCoordinate>
+          <northBoundingCoordinate>38.119</northBoundingCoordinate>
+          <southBoundingCoordinate>37.6742</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2011-05-27</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2025-06-28</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>Data collection is ongoing and will be published as needed.</description>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Kristina</givenName>
+        <surName>Callahan</surName>
+      </individualName>
+      <organizationName>Eastern Rivers and Mountains Network, National Park Service</organizationName>
+      <electronicMailAddress>kristina_callahan@nps.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0009-0000-5606-4044</userId>
+    </contact>
+    <publisher>
+      <organizationName>National Park Service</organizationName>
+      <address>
+        <deliveryPoint>1201 Oakridge Drive, Suite 150</deliveryPoint>
+        <city>Fort Collins</city>
+        <administrativeArea>CO</administrativeArea>
+        <postalCode>80525</postalCode>
+        <country>USA</country>
+      </address>
+      <electronicMailAddress>nrss_datastore@nps.gov</electronicMailAddress>
+      <onlineUrl>http://www.nps.gov</onlineUrl>
+      <userId directory="https://ror.org/">https://ror.org/044zqqy65</userId>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <para>Details on how these data were collected, reviewed for accuracy, and analyzed can be found in the protocol, quality assurance plan, and published reports:&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2229775&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2256769&#13;
+https://irma.nps.gov/DataStore/Reference/Profile/2227638</para>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Eastern Rivers and Mountains Network Streamside Bird Monitoring</title>
+      <personnel>
+        <individualName>
+          <givenName>Matthew</givenName>
+          <surName>Marshall</surName>
+        </individualName>
+        <organizationName>Eastern Rivers and Mountains Network, National Park Service</organizationName>
+        <electronicMailAddress>matt_marshall@nps.gov</electronicMailAddress>
+		<onlineUrl>https://irma.nps.gov/DataStore/Reference/Profile/2227638</onlineUrl>
+        <userId directory="https://orcid.org">https://orcid.org/0009-0009-9771-4360</userId>		
+        <role>Principal Investigator</role>
+      </personnel>
+      <funding>National Park Service</funding>
+    </project>
+    <dataTable>
+      <entityName>ERMN_StreamsideBirds_2315071_NPSpecies</entityName>
+      <entityDescription>species list by park for NPSpecies 2011-2025 ERMN</entityDescription>
+      <physical>
+        <objectName>ERMN_StreamsideBirds_2315071_NPSpecies.csv</objectName>
+        <size unit="bytes">27189</size>
+        <authentication method="MD5">dd7d3f0ec586261120b9bd503281e12a</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://irma.nps.gov/DataStore/Reference/Profile/2315071</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Park</attributeName>
+          <attributeDefinition>Four-letter park code used to link data to park species record in NPSpecies.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Four-letter park code used to link data to park species record in NPSpecies.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Reference_Code</attributeName>
+          <attributeDefinition>NPS DataStore Reference Code used to link data  to park species record in NPSpecies.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2315071</minimum>
+                  <maximum exclusive="false">2315071</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Scientific_Name</attributeName>
+          <attributeDefinition>Scientific name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Common_Name</attributeName>
+          <attributeDefinition>Common name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Common name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+		        <attribute>
+          <attributeName>First_Year</attributeName>
+          <attributeDefinition>First year the species was recorded (by park) in this dataset.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2011</minimum>
+                  <maximum exclusive="false">2025</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>490</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>ERMN_StreamsideBirds_2315071_PointCount</entityName>
+      <entityDescription>streamside bird point count data 2011-2025 ERMN</entityDescription>
+      <physical>
+        <objectName>ERMN_StreamsideBirds_2315071_PointCount.csv</objectName>
+        <size unit="bytes">17060189</size>
+        <authentication method="MD5">d78acf5958308f9a409debef4c8959fb</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://irma.nps.gov/DataStore/Reference/Profile/2315071</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Unit_Code</attributeName>
+          <attributeDefinition>Park unit identifier. It is the official 4-letter National Park Service abbreviation for the park unit (i.e. ALPO). See keywords for full park name.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Park unit identifier. It is the official 4-letter National Park Service abbreviation for the park unit (i.e. ALPO). See keywords for full park name.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Site_Name</attributeName>
+          <attributeDefinition>Site name for each sampling site. Named after the associated stream and/or geographic landmark and a number. The number refers to the distance (in 100m units) from the stream mouth.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site name for each sampling site. Named after the associated stream and/or geographic landmark and a number. The number refers to the distance (in 100m units) from the stream mouth.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Site_ID</attributeName>
+          <attributeDefinition>Site identifier for each sampling site. All sampling sites are located along wadeable streams.  It is a combination of the Unit_Code and a 4-digit number. Numbers in the 3000s refer to the GRTS order (see Site Selection in Protocol).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site identifier for each sampling site. All sampling sites are located along wadeable streams.  It is a combination of the Unit_Code and a 4-digit number. Numbers in the 3000s refer to the GRTS order (see Site Selection in Protocol).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Station_ID</attributeName>
+          <attributeDefinition>Station identifier for each point count station.  Identifier is a combination of Site_ID, point count station number (1, 2, or 3), and the side of the stream the point coint station is located (L = Left and R = Right) when the observer is facing upstream.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station identifier for each point count station.  Identifier is a combination of Site_ID, point count station number (1, 2, or 3), and the side of the stream the point coint station is located (L = Left and R = Right) when the observer is facing upstream.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Panel</attributeName>
+          <attributeDefinition>Number referring to which sampling panel a site belongs. All DEWA and NERI sites belong to one of two sampling panels. 1=Panel 1; 2=Panel 2. 0 = sites that are not part of a panel.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Number referring to which sampling panel a site belongs. All DEWA and NERI sites belong to one of two sampling panels. 1=Panel 1; 2=Panel 2. 0 = sites that are not part of a panel.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Visit</attributeName>
+          <attributeDefinition>Number referring to each time an observer goes to (or visits) a site.  Sites are visited twice a year. Visit number can either be 1 or 2.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Number referring to each time an observer goes to (or visits) a site.  Sites are visited twice a year. Visit number can either be 1 or 2.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Start_Date_ISO</attributeName>
+          <attributeDefinition>Date for the site visit (event). There is no end date. An event is completed on the same date.</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Observer_Initials</attributeName>
+          <attributeDefinition>Unique observer identifier. It is a combination of the observers initials - first, middle, and last names (i.e. MRM).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique observer identifier. It is a combination of the observers initials - first, middle, and last names (i.e. MRM).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Ambient_Noise</attributeName>
+          <attributeDefinition>Estimate of ambient or background noise in decibels (dBA) during point count based on handheld sensor. Value is between 30 and 100. 9999 for no reading.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">30</minimum>
+                  <maximum exclusive="false">72.25</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Road_Noise</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if road traffic noise contributed to ambient noise estimate. Otherwise, checked No. Default Value is No. Added in 2014.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if road traffic noise contributed to ambient noise estimate. Otherwise, checked No. Default Value is No. Added in 2014.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Start_Time_ISO</attributeName>
+          <attributeDefinition>Start time (EST) for the point count event. End time is not recorded. Point count duration is 10 minutes.</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>No_Birds</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if no birds were detected during the point count.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if no birds were detected during the point count.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Species_Code</attributeName>
+          <attributeDefinition>Unique 4-letter bird species identifier managed by the Institute of Bird Populations. https://www.birdpop.org/pages/birdSpeciesCodes.php</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique 4-letter bird species identifier managed by the Institute of Bird Populations. https://www.birdpop.org/pages/birdSpeciesCodes.php</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Common_Name</attributeName>
+          <attributeDefinition>Common Name for the bird species as defined by the NACC/AOS. http://checklist.aou.org/</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Common Name for the bird species as defined by the NACC/AOS. http://checklist.aou.org/</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Scientific_Name</attributeName>
+          <attributeDefinition>Scientific name for the bird species as defined by the NACC/AOS. http://checklist.aou.org/</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name for the bird species as defined by the NACC/AOS. http://checklist.aou.org/</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ITIS_Scientific_Name</attributeName>
+          <attributeDefinition>Scientific name crosswalked to ITIS at the time of export. This is used to generate metadata and to enter data into NPSpecies. https://irma.nps.gov/NPSpecies/</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name crosswalked to ITIS at the time of export. This is used to generate metadata and to enter data into NPSpecies. https://irma.nps.gov/NPSpecies/</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Detection_Type_Code</attributeName>
+          <attributeDefinition>Unique one-letter abbreviation to describe how the bird was detected (i.e. C).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>B</code>
+                    <definition>Begging. For juvenile birds only.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>C</code>
+                    <definition>Calls, Chips, and other non-song Cues.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>D</code>
+                    <definition>Drumming. For Woodpeckers and Ruffed Grouse only.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Not Applicable</code>
+                    <definition>Not Applicable. For records with No Birds.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Q</code>
+                    <definition>Quiet (did not make audible sound during point count. Same as seen only).</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>Song.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>Unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Distance_Band</attributeName>
+          <attributeDefinition>Estimated horizontal distance in meters between observer and bird when bird is first detected. Placed into one of three distance bands surrounding point count station (&lt;50m, 50-75m, or &gt;75m).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Estimated horizontal distance in meters between observer and bird when bird is first detected. Placed into one of three distance bands surrounding point count station (&lt;50m, 50-75m, or &gt;75m).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Juvenile</attributeName>
+          <attributeDefinition>QC annotation code. Checked Yes (TRUE) if individual bird was determined by obsever to be a juvenile (hatched that year) based on a combination of plumage, behavior, and sounds.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>QC annotation code. Checked Yes (TRUE) if individual bird was determined by obsever to be a juvenile (hatched that year) based on a combination of plumage, behavior, and sounds.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Flyover</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was flying over point count radius during count.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was flying over point count radius during count.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_1</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 1 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 1 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_2</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 2 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 2 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_3</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 3 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 3 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_4</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 4 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 4 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_5</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 5 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 5 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_6</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 6 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 6 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_7</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 7 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 7 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_8</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 8 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 8 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_9</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 9 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 9 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minute_10</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if individual bird was detected by observer during minute 10 of point count. Can be checked Yes for more than one minute.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if individual bird was detected by observer during minute 10 of point count. Can be checked Yes for more than one minute.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Minutes_Accurate</attributeName>
+          <attributeDefinition>Checked Yes (TRUE) if observer believes they successfully recorded all minute-by-minute detections. Otherwise, observer checks No. Default Value is Yes. Not Applicable entered for point counts with No Birds.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes (TRUE) if observer believes they successfully recorded all minute-by-minute detections. Otherwise, observer checks No. Default Value is Yes. Not Applicable entered for point counts with No Birds.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>First_Minute_Detected</attributeName>
+          <attributeDefinition>Derived value. Minute in which observer first detects bird (e.g., 3 indicates observer first detected bird during the third minute of the ten minute point count). Not Applicable entered for point counts with No Birds.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Derived value. Minute in which observer first detects bird (e.g., 3 indicates observer first detected bird during the third minute of the ten minute point count). Not Applicable entered for point counts with No Birds.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+		  <missingValueCode>
+			<code>Not Applicable</code>
+			<codeExplanation>Not Applicable</codeExplanation>
+		  </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Hemlock_Condition_Score</attributeName>
+          <attributeDefinition>Score assigned by observer to describe the condition of hemlock trees within 50 meters of the point count station.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>No hemlock trees observed within 50m radius of point count station.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>Hemlocks retaining most needles and live branches at least 2/3   3/4 of the way down the trunk and appearing dark green (even some healthy hemlocks loose the lowest branches depending upon shadiness).</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>Hemlock needles paler in color with some loss of needles and the appearance of bare fine twigs on the lowest branches.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>Hemlocks defoliated 1/2   3/4 of the way up the trunk with only large, dead branches sticking out of the lower trunk, only the crown retains needles.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>Hemlocks completely defoliated and in various stages of decay.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Latitude</attributeName>
+          <attributeDefinition>Geographic coordinates for the point count station. Datum is WGS84. Recorded via GPS. Used for navigation to station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">37.524827</minimum>
+                  <maximum exclusive="false">41.296372</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Longitude</attributeName>
+          <attributeDefinition>Geographic coordinates for the point count station. Datum is WGS84. Recorded via GPS. Used for navigation to station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-81.106267</minimum>
+                  <maximum exclusive="false">-74.793732</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Random_Station</attributeName>
+          <attributeDefinition>Checked Yes for point count station closest to the randomly selected point for DEWA and NERI. For other parks, checked Yes for downstream most point count station. Added in 2014.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Checked Yes for point count station closest to the randomly selected point for DEWA and NERI. For other parks, checked Yes for downstream most point count station. Added in 2014.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Event_ID</attributeName>
+          <attributeDefinition>Event identifier is a combination of the Station_ID, Start_Date_ISO and Start_Time_ISO (i.e. ALPO.1001.1R_2011-05-27_06:38).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Event identifier is a combination of the Station_ID, Start_Date_ISO and Start_Time_ISO (i.e. ALPO.1001.1R_2011-05-27_06:38).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>55071</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata id="CUI">
+    <metadata>
+      <CUI>PUBLIC</CUI>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata>
+    <metadata>
+      <emlEditor>
+        <app>EMLassemblyline</app>
+        <release>3.5.5</release>
+      </emlEditor>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata id="agencyOriginated">
+    <metadata>
+      <agencyOriginated>
+        <agency>NPS</agency>
+        <byOrForNPS>TRUE</byOrForNPS>
+      </agencyOriginated>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata id="emlEditor">
+    <metadata>
+      <emlEditor>
+        <app>EMLeditor</app>
+        <release>0.1.6</release>
+      </emlEditor>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
