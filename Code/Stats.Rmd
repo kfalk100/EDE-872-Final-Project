@@ -4,17 +4,52 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r, One-way ANOVA test on hemlock tree abundance}
+```{r, message = FALSE}
+library(tidyverse)
+library(agricolae)
+library(here)
 
+```
+
+```{r, read our data sets}
+Ambient_Noise <- read.csv(here("Data/Processed/Ambient_Grouped.csv"))
+
+Road_Noise <- read.csv(here("Data/Processed/Road_Grouped.csv"))
+
+Hemlock <- read.csv(here("Data/Processed/Hemlock_Grouped.csv"))
+
+```
+
+```{r, One-way ANOVA test on hemlock tree abundance}
+Hemlock_ANOVA <- aov(data = Hemlock, Detection_Count ~ Hemlock_Condition_Score)
+
+summary(Hemlock_ANOVA)
+
+TukeyHSD(Hemlock_ANOVA)
+
+#this is not working, a new dataframe is needed
+
+#grpah results
 
 ```
 
 ```{r, singular linear regression for ambient noise}
+Ambient_Regression <- lm(data = Ambient_Noise, Detection_Count ~ Ambient_Noise)
 
+summary(Ambient_Regression)
+
+cor.test(Ambient_Noise$Detection_Count, Ambient_Noise$Ambient_Noise)
+
+#graph results
 
 ```
 
 ```{r, t-test for road noise}
+Road_2ttest <- t.test(Road_Noise$Detection_Count ~ Road_Noise$Road_Noise)
 
+Road_2ttest
+
+ggplot(Road_Noise, aes(x = Detection_Count, color = as.factor(Road_Noise))) +
+  geom_freqpoly()
 
 ```
