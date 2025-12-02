@@ -1,0 +1,38 @@
+---
+title: "ENV 872 Final Project Data Exploration"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+``` {r / Install Packages and Establish Working Directory}
+
+
+```
+
+``` {r / Set Environment}
+
+
+```
+
+``` {r Line Plot of Species Appearance Over Time}
+
+
+```
+
+``` {r / Line Plot of Ambient Noise Over Time}
+
+
+```
+
+``` {r / Line Plot or Scatter Plot of Hemlock Condition Over Time}
+
+
+```
+
+``` {r / Graph Monitoring Sites}
+
+
+```
+
+``` {r }
