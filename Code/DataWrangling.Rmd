@@ -129,6 +129,38 @@ write.csv(hemlock_grouped, row.names = FALSE,
 
 ```
 
+```{r}
+dateincluded_trim <- select(pointcount_detection,
+                          Unit_Code,
+                          Site_Name,
+                          Start_Date_ISO,
+                          Year,
+                          Ambient_Noise,
+                          Road_Noise,
+                          Common_Name,
+                          Hemlock_Condition_Score,
+                          Latitude,
+                          Longitude
+                          )
+
+dateincluded_woodpeckers <- dateincluded_trim %>%
+  filter(!Common_Name %in% c("Unidentified Bird",
+                             "Unidentified Woodpecker",
+                             "Not Applicable")) %>%
+  filter(Common_Name %in% c("Downy Woodpecker",
+                            "Pileated Woodpecker",
+                            "Red-bellied Woodpecker",
+                            "Hairy Woodpecker")) %>%
+  filter(Unit_Code %in% c("DEWA"))%>%
+  rename(National_Park = Unit_Code) %>%
+  rename(Detection_Date = Start_Date_ISO)%>%
+  mutate(Hemlock_Condition_Score = ifelse(
+    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
+
+write.csv(dateincluded_woodpeckers, row.names = FALSE, 
+          file = here("Data","Processed","Dateincluded_Woodpeckers.csv"))
+
+```
 
 
 ```
