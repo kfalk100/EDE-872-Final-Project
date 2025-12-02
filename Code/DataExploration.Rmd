@@ -5,23 +5,76 @@ editor_options:
   chunk_output_type: console
 ---
 
-``` {r / Install Packages and Establish Working Directory}
+``` {r / Install Packages and Establish Working Directory, warning=FALSE, echo=FALSE, include=FALSE}
+install.packages("lubridate")
+install.packages("ggplot2")
+install.packages("mapview")
+install.packages("tidyverse")
+install.packages("here")
 
+library(lubridate)
+library(ggplot2)
+library(mapview)
+library(tidyverse)
+library(here)
 
+here()
 ```
 
 ``` {r / Set Environment}
- 
+Ambient_Noise <- read.csv(here("Data/Processed/Ambient_Grouped.csv"))
+Hemlock_Condition <- read.csv(here("Data/Processed/Hemlock_Grouped.csv"))
+Road_Noise <- read.csv(here("Data/Processed/Road_Grouped.csv"))
+Woodpeckers_Grouped <- read.csv(here("Data/Processed/Woodpeckers_Grouped.csv"))
+# For Presence/Nonpresence
+Woodpeckers_Delaware <- read.csv(here("Data/Processed/Woodpeckers_Delaware.csv"))
+# Comprehensive
+
+```
+
+
+
+``` {r Table of Woodpecker Appearance per Year}
+Woodpeckers_GroupedTrim <- Woodpeckers_Grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Total_Detections = sum(Detection_Count))
+  
+  
+# knitr::kable(nutrient_data_tn, caption = "Summary of Total Nitrogen") # Knitting assigns caption of: Table 1: Summary of Total Nitrogen
+# colons mean aligned to that side
+# can rename column names
 
 ```
 
 ``` {r Line Plot of Species Appearance Over Time}
-
-
+Species_over_time <- 
+  ggplot(Woodpeckers_GroupedTrim, 
+         aes(x=Year,
+             y=Total_Detections,
+             color=Common_Name)) +
+  geom_line() +
+  labs(
+    x="Year",
+    y="Number of Detections",
+    title="Woodpecker Species Appearance (2014-2025)",
+    color="Species"
+  )
+Species_over_time
 ```
 
 ``` {r / Line Plot of Ambient Noise Over Time}
-
+Noise_over_time <- 
+  ggplot(Ambient_Noise,
+         aes(x=Year,
+             y=Ambient_Noise)) +
+  geom_point() +
+  labs(
+    x="Year",
+    y="Ambient Noise (dB)"
+  )
+Noise_over_time
 
 ```
 
