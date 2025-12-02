@@ -1,0 +1,567 @@
+"National_Park","Site_Name","Year","Ambient_Noise","Road_Noise","Common_Name","Hemlock_Condition_Score","Latitude","Longitude"
+"DEWA","Caledonia Creek 13",2014,45.75,FALSE,"Hairy Woodpecker",2,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2014,51.25,FALSE,"Pileated Woodpecker",3,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2016,42,FALSE,"Pileated Woodpecker",3,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2022,50.25,FALSE,"Red-bellied Woodpecker",3,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2022,52,FALSE,"Pileated Woodpecker",3,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2024,44.75,FALSE,"Pileated Woodpecker",4,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2024,44.75,FALSE,"Downy Woodpecker",4,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2024,45,FALSE,"Downy Woodpecker",4,40.973186,-75.143983
+"DEWA","Caledonia Creek 13",2018,43,FALSE,"Downy Woodpecker",3,40.971255,-75.144299
+"DEWA","Caledonia Creek 13",2022,45.5,FALSE,"Hairy Woodpecker",3,40.971255,-75.144299
+"DEWA","Caledonia Creek 13",2022,44,FALSE,"Red-bellied Woodpecker",3,40.971255,-75.144299
+"DEWA","Caledonia Creek 13",2024,38.75,FALSE,"Downy Woodpecker",3,40.971255,-75.144299
+"DEWA","Caledonia Creek 13",2024,38.75,FALSE,"Downy Woodpecker",3,40.971255,-75.144299
+"DEWA","Caledonia Creek 13",2014,41.5,FALSE,"Red-bellied Woodpecker",2,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2016,38.5,FALSE,"Downy Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2016,43,FALSE,"Red-bellied Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2016,43,FALSE,"Downy Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2018,42.5,FALSE,"Red-bellied Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2018,42.5,FALSE,"Red-bellied Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2022,40,FALSE,"Hairy Woodpecker",3,40.96957,-75.144464
+"DEWA","Caledonia Creek 13",2024,37.5,FALSE,"Red-bellied Woodpecker",3,40.96957,-75.144464
+"DEWA","Van Campen Creek 12",2014,40.25,FALSE,"Red-bellied Woodpecker",1,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2016,39,TRUE,"Pileated Woodpecker",2,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2018,35,FALSE,"Downy Woodpecker",2,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2022,39.75,FALSE,"Pileated Woodpecker",2,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2024,41.75,TRUE,"Downy Woodpecker",3,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2024,41.75,TRUE,"Hairy Woodpecker",3,41.112214,-74.98555
+"DEWA","Van Campen Creek 12",2018,35,FALSE,"Downy Woodpecker",2,41.113797,-74.984332
+"DEWA","Van Campen Creek 12",2022,40.25,TRUE,"Red-bellied Woodpecker",2,41.113797,-74.984332
+"DEWA","Van Campen Creek 12",2022,40.25,TRUE,"Downy Woodpecker",2,41.113797,-74.984332
+"DEWA","Van Campen Creek 12",2024,38.75,TRUE,"Downy Woodpecker",3,41.113797,-74.984332
+"DEWA","Van Campen Creek 12",2016,37.5,TRUE,"Downy Woodpecker",3,41.115329,-74.983297
+"DEWA","Van Campen Creek 12",2018,38,FALSE,"Downy Woodpecker",3,41.115329,-74.983297
+"DEWA","Deckers Creek 03",2016,42.25,FALSE,"Downy Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2016,42,FALSE,"Downy Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2024,41.25,FALSE,"Pileated Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2024,41.25,FALSE,"Red-bellied Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2024,39,FALSE,"Downy Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2024,39,FALSE,"Pileated Woodpecker",3,41.19607,-74.901588
+"DEWA","Deckers Creek 03",2016,32,FALSE,"Hairy Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2016,41,FALSE,"Downy Woodpecker",2,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2016,41,FALSE,"Red-bellied Woodpecker",2,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2016,41,FALSE,"Red-bellied Woodpecker",2,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2018,34.5,FALSE,"Hairy Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2018,35,FALSE,"Pileated Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2018,35,FALSE,"Red-bellied Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2022,47.75,FALSE,"Downy Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2022,47.75,FALSE,"Red-bellied Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2024,35,FALSE,"Pileated Woodpecker",3,41.197587,-74.903088
+"DEWA","Deckers Creek 03",2016,36,FALSE,"Downy Woodpecker",3,41.199207,-74.902803
+"DEWA","Deckers Creek 03",2016,41,FALSE,"Downy Woodpecker",2,41.199207,-74.902803
+"DEWA","Deckers Creek 03",2022,38.25,FALSE,"Pileated Woodpecker",3,41.199207,-74.902803
+"DEWA","Deckers Creek 03",2022,38,FALSE,"Downy Woodpecker",3,41.199207,-74.902803
+"DEWA","Deckers Creek 03",2024,35,FALSE,"Pileated Woodpecker",3,41.199207,-74.902803
+"DEWA","Deckers Creek 03",2024,35,FALSE,"Downy Woodpecker",3,41.199207,-74.902803
+"DEWA","Dingmans Creek 05",2014,45.5,TRUE,"Red-bellied Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2014,47,TRUE,"Red-bellied Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2016,43.5,TRUE,"Pileated Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2016,44.5,TRUE,"Pileated Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2024,42,TRUE,"Pileated Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2024,42,TRUE,"Pileated Woodpecker",5,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2024,45.25,TRUE,"Red-bellied Woodpecker",3,41.221193,-74.872862
+"DEWA","Dingmans Creek 05",2016,36.25,TRUE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2016,35.75,TRUE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2016,45,FALSE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2016,45,FALSE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2016,45,FALSE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2018,45.75,FALSE,"Red-bellied Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2022,44.75,FALSE,"Red-bellied Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2022,44.25,FALSE,"Pileated Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2022,40.75,TRUE,"Red-bellied Woodpecker",3,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2024,41.5,FALSE,"Downy Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2024,41.75,FALSE,"Pileated Woodpecker",5,41.222164,-74.874508
+"DEWA","Dingmans Creek 05",2016,41.25,FALSE,"Downy Woodpecker",2,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2018,48,FALSE,"Downy Woodpecker",2,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2018,48,FALSE,"Downy Woodpecker",2,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2022,49.75,FALSE,"Downy Woodpecker",1,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2024,41,FALSE,"Downy Woodpecker",3,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2024,42,FALSE,"Downy Woodpecker",3,41.222358,-74.87709
+"DEWA","Dingmans Creek 05",2024,45.75,FALSE,"Downy Woodpecker",3,41.222358,-74.87709
+"DEWA","Dunnfield Creek 03",2014,59.75,TRUE,"Red-bellied Woodpecker",3,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2018,55.5,TRUE,"Downy Woodpecker",5,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2018,59.25,TRUE,"Downy Woodpecker",5,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2022,52,TRUE,"Downy Woodpecker",5,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2024,55.25,TRUE,"Red-bellied Woodpecker",3,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2024,55.5,TRUE,"Downy Woodpecker",3,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2024,55.5,TRUE,"Red-bellied Woodpecker",3,40.972203,-75.12619
+"DEWA","Dunnfield Creek 03",2016,50.25,TRUE,"Downy Woodpecker",4,40.974039,-75.12677
+"DEWA","Dunnfield Creek 03",2018,52.25,TRUE,"Hairy Woodpecker",3,40.974039,-75.12677
+"DEWA","Dunnfield Creek 03",2022,62,TRUE,"Pileated Woodpecker",3,40.974039,-75.12677
+"DEWA","Dunnfield Creek 03",2024,53,TRUE,"Downy Woodpecker",3,40.974039,-75.12677
+"DEWA","Dunnfield Creek 03",2024,52.75,TRUE,"Downy Woodpecker",3,40.974039,-75.12677
+"DEWA","Toms Creek 20",2018,39.75,FALSE,"Red-bellied Woodpecker",3,41.136262,-74.964469
+"DEWA","Toms Creek 20",2024,41.75,FALSE,"Hairy Woodpecker",3,41.136262,-74.964469
+"DEWA","Toms Creek 20",2016,40,FALSE,"Hairy Woodpecker",2,41.137481,-74.96254
+"DEWA","Toms Creek 20",2022,44.25,FALSE,"Pileated Woodpecker",3,41.137481,-74.96254
+"DEWA","Toms Creek 20",2022,44.25,FALSE,"Pileated Woodpecker",3,41.137481,-74.96254
+"DEWA","Toms Creek 20",2022,44.25,FALSE,"Pileated Woodpecker",3,41.137481,-74.96254
+"DEWA","Toms Creek 20",2024,41.75,FALSE,"Hairy Woodpecker",3,41.137481,-74.96254
+"DEWA","Toms Creek 20",2016,38.5,FALSE,"Hairy Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2016,39,FALSE,"Red-bellied Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2016,39,FALSE,"Hairy Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2016,38,FALSE,"Downy Woodpecker",4,41.139114,-74.962737
+"DEWA","Toms Creek 20",2018,42,FALSE,"Downy Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2022,52.25,FALSE,"Pileated Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2022,44.5,FALSE,"Pileated Woodpecker",4,41.139114,-74.962737
+"DEWA","Toms Creek 20",2022,44.5,FALSE,"Red-bellied Woodpecker",4,41.139114,-74.962737
+"DEWA","Toms Creek 20",2022,44.5,FALSE,"Pileated Woodpecker",4,41.139114,-74.962737
+"DEWA","Toms Creek 20",2024,46,FALSE,"Pileated Woodpecker",3,41.139114,-74.962737
+"DEWA","Toms Creek 20",2024,46,FALSE,"Hairy Woodpecker",3,41.139114,-74.962737
+"DEWA","Spackmans Creek 08",2018,40.25,TRUE,"Hairy Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2018,40.25,TRUE,"Red-bellied Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2018,40.5,TRUE,"Pileated Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2018,35,FALSE,"Red-bellied Woodpecker",2,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2022,47.5,TRUE,"Downy Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2022,47.5,TRUE,"Red-bellied Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2022,40.75,TRUE,"Red-bellied Woodpecker",4,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2024,37.5,TRUE,"Pileated Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2024,36.5,TRUE,"Downy Woodpecker",3,41.172493,-74.903056
+"DEWA","Spackmans Creek 08",2016,36.5,FALSE,"Downy Woodpecker",3,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2016,36.5,FALSE,"Red-bellied Woodpecker",3,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2016,36.5,FALSE,"Downy Woodpecker",3,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2018,34,FALSE,"Red-bellied Woodpecker",3,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2022,38,FALSE,"Hairy Woodpecker",4,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2024,34.25,FALSE,"Pileated Woodpecker",3,41.173089,-74.904751
+"DEWA","Spackmans Creek 08",2018,39.75,FALSE,"Downy Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2018,34.25,FALSE,"Downy Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2018,34.5,FALSE,"Downy Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2018,34.5,FALSE,"Pileated Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2022,36,FALSE,"Red-bellied Woodpecker",4,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2024,40,FALSE,"Hairy Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2024,39.75,FALSE,"Hairy Woodpecker",3,41.175344,-74.906082
+"DEWA","Spackmans Creek 08",2024,36.5,FALSE,"Red-bellied Woodpecker",3,41.175344,-74.906082
+"DEWA","Dingmans Creek 57",2014,60,TRUE,"Hairy Woodpecker",1,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2016,54.25,TRUE,"Downy Woodpecker",3,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2016,54.5,TRUE,"Downy Woodpecker",3,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2022,57.25,TRUE,"Downy Woodpecker",1,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2024,57.25,FALSE,"Downy Woodpecker",3,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2024,57.25,FALSE,"Downy Woodpecker",3,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2024,55.25,TRUE,"Downy Woodpecker",3,41.237803,-74.915915
+"DEWA","Dingmans Creek 57",2014,51.75,TRUE,"Pileated Woodpecker",1,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2016,45,TRUE,"Downy Woodpecker",2,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2016,45,TRUE,"Downy Woodpecker",2,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2016,44.5,TRUE,"Pileated Woodpecker",2,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2022,54.75,TRUE,"Red-bellied Woodpecker",2,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2022,46,TRUE,"Hairy Woodpecker",1,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2022,45.5,TRUE,"Downy Woodpecker",1,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2024,44.25,TRUE,"Downy Woodpecker",3,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2024,47,TRUE,"Downy Woodpecker",3,41.23776,-74.918289
+"DEWA","Dingmans Creek 57",2016,46.75,TRUE,"Hairy Woodpecker",3,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2016,43.5,TRUE,"Downy Woodpecker",3,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2016,43.75,TRUE,"Downy Woodpecker",2,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2016,43.75,TRUE,"Downy Woodpecker",2,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2024,47.25,TRUE,"Red-bellied Woodpecker",3,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2024,44,TRUE,"Downy Woodpecker",3,41.23893,-74.920173
+"DEWA","Dingmans Creek 57",2024,44,TRUE,"Downy Woodpecker",3,41.23893,-74.920173
+"DEWA","Vancampens Brook 95",2014,46.25,FALSE,"Downy Woodpecker",1,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2014,46.5,FALSE,"Downy Woodpecker",1,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2016,36,FALSE,"Pileated Woodpecker",5,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2016,36,FALSE,"Pileated Woodpecker",5,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2016,31,FALSE,"Pileated Woodpecker",1,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2016,31,FALSE,"Red-bellied Woodpecker",1,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2018,39.75,FALSE,"Pileated Woodpecker",5,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2022,37,FALSE,"Downy Woodpecker",1,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2024,36.75,FALSE,"Red-bellied Woodpecker",2,41.095516,-74.925565
+"DEWA","Vancampens Brook 95",2016,37,FALSE,"Red-bellied Woodpecker",5,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2016,37,FALSE,"Red-bellied Woodpecker",5,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2024,42.75,FALSE,"Pileated Woodpecker",1,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2024,42.75,FALSE,"Downy Woodpecker",1,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2024,42.75,FALSE,"Downy Woodpecker",1,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2024,37,FALSE,"Hairy Woodpecker",5,41.096639,-74.923572
+"DEWA","Vancampens Brook 95",2016,36,FALSE,"Downy Woodpecker",2,41.097621,-74.921539
+"DEWA","Vancampens Brook 95",2016,31,FALSE,"Red-bellied Woodpecker",1,41.097621,-74.921539
+"DEWA","Vancampens Brook 95",2016,31,FALSE,"Red-bellied Woodpecker",1,41.097621,-74.921539
+"DEWA","Vancampens Brook 95",2016,31,FALSE,"Red-bellied Woodpecker",1,41.097621,-74.921539
+"DEWA","Vancampens Brook 95",2024,35.5,FALSE,"Pileated Woodpecker",1,41.097621,-74.921539
+"DEWA","Vancampens Brook 95",2024,35,FALSE,"Downy Woodpecker",2,41.097621,-74.921539
+"DEWA","Adams Creek 14",2014,41.5,FALSE,"Pileated Woodpecker",1,41.247096,-74.875643
+"DEWA","Adams Creek 14",2022,42.25,FALSE,"Downy Woodpecker",3,41.247096,-74.875643
+"DEWA","Adams Creek 14",2022,39.5,FALSE,"Pileated Woodpecker",4,41.247096,-74.875643
+"DEWA","Adams Creek 14",2022,40,FALSE,"Pileated Woodpecker",4,41.247096,-74.875643
+"DEWA","Adams Creek 14",2024,39.5,FALSE,"Downy Woodpecker",3,41.247096,-74.875643
+"DEWA","Adams Creek 14",2018,43.5,FALSE,"Downy Woodpecker",3,41.248858,-74.876783
+"DEWA","Adams Creek 14",2022,40.75,FALSE,"Downy Woodpecker",4,41.248858,-74.876783
+"DEWA","Adams Creek 14",2022,42,FALSE,"Downy Woodpecker",4,41.248858,-74.876783
+"DEWA","Adams Creek 14",2024,45.5,FALSE,"Pileated Woodpecker",3,41.248858,-74.876783
+"DEWA","Adams Creek 33",2022,57.5,FALSE,"Hairy Woodpecker",4,41.256252,-74.889178
+"DEWA","Adams Creek 33",2022,57.5,FALSE,"Downy Woodpecker",4,41.256252,-74.889178
+"DEWA","Adams Creek 33",2022,57.25,FALSE,"Downy Woodpecker",4,41.256252,-74.889178
+"DEWA","Adams Creek 33",2024,50.5,FALSE,"Red-bellied Woodpecker",3,41.256252,-74.889178
+"DEWA","Adams Creek 33",2022,47,TRUE,"Pileated Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2022,49.25,TRUE,"Downy Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2024,46.75,TRUE,"Downy Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2024,47.25,TRUE,"Downy Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2024,47.25,TRUE,"Downy Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2024,44.25,TRUE,"Downy Woodpecker",3,41.257592,-74.890928
+"DEWA","Adams Creek 33",2014,51.5,TRUE,"Pileated Woodpecker",2,41.259362,-74.890498
+"DEWA","Adams Creek 33",2016,43,TRUE,"Downy Woodpecker",3,41.259362,-74.890498
+"DEWA","Adams Creek 33",2016,43,TRUE,"Downy Woodpecker",3,41.259362,-74.890498
+"DEWA","Adams Creek 33",2022,43,TRUE,"Downy Woodpecker",4,41.259362,-74.890498
+"DEWA","Adams Creek 33",2022,43.25,TRUE,"Downy Woodpecker",3,41.259362,-74.890498
+"DEWA","Adams Creek 33",2024,42.5,TRUE,"Hairy Woodpecker",3,41.259362,-74.890498
+"DEWA","Little Bushkill Creek 01",2014,50.75,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2014,48,FALSE,"Pileated Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2016,52.5,FALSE,"Downy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2016,52.5,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2016,41,FALSE,"Downy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2016,41.5,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2018,53.5,FALSE,"Downy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2018,53.5,FALSE,"Downy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2018,53.75,FALSE,"Downy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2022,47.25,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2022,45.5,FALSE,"Hairy Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2024,51.25,TRUE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2024,45,TRUE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2024,46.75,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2024,47.75,FALSE,"Red-bellied Woodpecker",5,41.093973,-75.005219
+"DEWA","Little Bushkill Creek 01",2014,52.5,FALSE,"Pileated Woodpecker",2,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2014,44.5,FALSE,"Pileated Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2014,44.25,FALSE,"Pileated Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2016,41,TRUE,"Red-bellied Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2016,41.5,TRUE,"Red-bellied Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2018,48.25,TRUE,"Red-bellied Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2022,47.25,FALSE,"Red-bellied Woodpecker",2,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2022,48,FALSE,"Red-bellied Woodpecker",2,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2024,46.75,FALSE,"Red-bellied Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2024,45.25,FALSE,"Downy Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2024,45.25,FALSE,"Downy Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2024,45.25,FALSE,"Downy Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2024,45.25,FALSE,"Downy Woodpecker",3,41.095702,-75.004956
+"DEWA","Little Bushkill Creek 01",2014,50.75,TRUE,"Pileated Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2016,45,TRUE,"Downy Woodpecker",2,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2022,53.5,TRUE,"Pileated Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2024,51.25,TRUE,"Red-bellied Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2024,51.25,TRUE,"Pileated Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2024,51,TRUE,"Hairy Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2024,52.25,TRUE,"Downy Woodpecker",5,41.09735,-75.003815
+"DEWA","Little Bushkill Creek 01",2024,51.5,TRUE,"Downy Woodpecker",5,41.09735,-75.003815
+"DEWA","Vancampens Brook 43",2014,54,FALSE,"Pileated Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2014,45.25,FALSE,"Downy Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2016,38,FALSE,"Downy Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2016,38,FALSE,"Red-bellied Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2018,45,FALSE,"Pileated Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2018,44.25,FALSE,"Pileated Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2022,43,FALSE,"Red-bellied Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2022,43,FALSE,"Downy Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2022,43,FALSE,"Red-bellied Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2024,43,FALSE,"Downy Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2024,42.25,FALSE,"Red-bellied Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2024,41.75,FALSE,"Hairy Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2024,41.75,FALSE,"Red-bellied Woodpecker",5,41.070781,-74.967392
+"DEWA","Vancampens Brook 43",2014,47.75,FALSE,"Red-bellied Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2016,47,FALSE,"Red-bellied Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2016,46.75,FALSE,"Red-bellied Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2016,46.25,FALSE,"Downy Woodpecker",4,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2018,38,FALSE,"Downy Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2022,43,FALSE,"Downy Woodpecker",2,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2024,43,FALSE,"Red-bellied Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2024,43,FALSE,"Red-bellied Woodpecker",5,41.071483,-74.96524
+"DEWA","Vancampens Brook 43",2016,36.25,FALSE,"Pileated Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2016,37.5,FALSE,"Downy Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2016,37.5,FALSE,"Downy Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2016,37.5,FALSE,"Downy Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2016,38,TRUE,"Downy Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2018,36,FALSE,"Pileated Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2018,36,FALSE,"Pileated Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2022,44.25,FALSE,"Red-bellied Woodpecker",5,41.072346,-74.963295
+"DEWA","Vancampens Brook 43",2024,43,TRUE,"Red-bellied Woodpecker",5,41.072346,-74.963295
+"DEWA","Dingmans Creek 39",2014,44,FALSE,"Downy Woodpecker",1,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2016,41.5,FALSE,"Hairy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2016,41.5,FALSE,"Hairy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2018,44,FALSE,"Downy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2022,48.25,FALSE,"Downy Woodpecker",4,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,47.75,FALSE,"Hairy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,48,FALSE,"Hairy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,49.5,FALSE,"Downy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,49.5,FALSE,"Downy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,49.75,FALSE,"Downy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2024,49.75,FALSE,"Hairy Woodpecker",3,41.228953,-74.902314
+"DEWA","Dingmans Creek 39",2014,42.5,FALSE,"Downy Woodpecker",2,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Hairy Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Red-bellied Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Red-bellied Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Downy Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Downy Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,41,FALSE,"Red-bellied Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,40.5,FALSE,"Red-bellied Woodpecker",2,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,40.5,FALSE,"Downy Woodpecker",2,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,40.5,FALSE,"Downy Woodpecker",2,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2016,40.5,FALSE,"Downy Woodpecker",2,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2018,44,FALSE,"Downy Woodpecker",3,41.230493,-74.903691
+"DEWA","Dingmans Creek 39",2014,47,FALSE,"Hairy Woodpecker",1,41.231499,-74.905425
+"DEWA","Dingmans Creek 39",2014,45.75,FALSE,"Hairy Woodpecker",1,41.231499,-74.905425
+"DEWA","Dingmans Creek 39",2014,40.75,FALSE,"Pileated Woodpecker",1,41.231499,-74.905425
+"DEWA","Dingmans Creek 39",2016,39,FALSE,"Red-bellied Woodpecker",3,41.231499,-74.905425
+"DEWA","Dingmans Creek 39",2018,46.25,FALSE,"Red-bellied Woodpecker",3,41.231499,-74.905425
+"DEWA","Toms Creek 07",2018,42.5,FALSE,"Pileated Woodpecker",2,41.128127,-74.957467
+"DEWA","Toms Creek 07",2018,44,FALSE,"Pileated Woodpecker",3,41.128127,-74.957467
+"DEWA","Toms Creek 07",2022,44.5,TRUE,"Downy Woodpecker",3,41.128127,-74.957467
+"DEWA","Toms Creek 07",2022,44.75,FALSE,"Downy Woodpecker",3,41.128127,-74.957467
+"DEWA","Toms Creek 07",2024,44.75,FALSE,"Downy Woodpecker",3,41.12932,-74.959321
+"DEWA","Toms Creek 07",2024,42.5,FALSE,"Pileated Woodpecker",3,41.12932,-74.959321
+"DEWA","Toms Creek 07",2016,50.5,FALSE,"Downy Woodpecker",3,41.130571,-74.96103
+"DEWA","Toms Creek 07",2018,48,FALSE,"Pileated Woodpecker",3,41.130571,-74.96103
+"DEWA","Toms Creek 07",2022,50.25,FALSE,"Hairy Woodpecker",3,41.130571,-74.96103
+"DEWA","Mill Creek 25",2014,37.5,FALSE,"Downy Woodpecker",1,41.165721,-74.924613
+"DEWA","Mill Creek 25",2016,36.5,FALSE,"Downy Woodpecker",1,41.165721,-74.924613
+"DEWA","Mill Creek 25",2016,37,FALSE,"Downy Woodpecker",1,41.165721,-74.924613
+"DEWA","Mill Creek 25",2018,35,FALSE,"Red-bellied Woodpecker",2,41.165721,-74.924613
+"DEWA","Mill Creek 25",2024,38,FALSE,"Pileated Woodpecker",2,41.165721,-74.924613
+"DEWA","Mill Creek 25",2024,38,FALSE,"Red-bellied Woodpecker",2,41.165721,-74.924613
+"DEWA","Mill Creek 25",2024,37.25,FALSE,"Pileated Woodpecker",3,41.165721,-74.924613
+"DEWA","Mill Creek 25",2024,37.25,FALSE,"Pileated Woodpecker",3,41.165721,-74.924613
+"DEWA","Mill Creek 25",2018,39.75,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2018,40,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2018,40,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2022,43.25,TRUE,"Hairy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2024,41,FALSE,"Pileated Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2024,41,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2024,41,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2024,40.5,FALSE,"Downy Woodpecker",5,41.16756,-74.925094
+"DEWA","Mill Creek 25",2014,49.25,FALSE,"Downy Woodpecker",1,41.1688,-74.926679
+"DEWA","Mill Creek 25",2014,40,FALSE,"Red-bellied Woodpecker",5,41.1688,-74.926679
+"DEWA","Mill Creek 25",2016,36,TRUE,"Pileated Woodpecker",1,41.1688,-74.926679
+"DEWA","Mill Creek 25",2018,34.75,FALSE,"Red-bellied Woodpecker",5,41.1688,-74.926679
+"DEWA","Mill Creek 25",2018,36.25,FALSE,"Red-bellied Woodpecker",5,41.1688,-74.926679
+"DEWA","Mill Creek 25",2018,36.25,FALSE,"Red-bellied Woodpecker",5,41.1688,-74.926679
+"DEWA","Toms Creek 25",2017,48,FALSE,"Red-bellied Woodpecker",2,41.139735,-74.963192
+"DEWA","Toms Creek 25",2017,45.75,FALSE,"Downy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2017,45.25,FALSE,"Downy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41.75,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41.5,FALSE,"Pileated Woodpecker",4,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41.5,FALSE,"Red-bellied Woodpecker",4,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41.5,FALSE,"Downy Woodpecker",4,41.139735,-74.963192
+"DEWA","Toms Creek 25",2023,41.5,FALSE,"Pileated Woodpecker",4,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,50.25,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,50.5,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,48.75,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,48.75,FALSE,"Pileated Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,49,FALSE,"Pileated Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2025,49,FALSE,"Hairy Woodpecker",3,41.139735,-74.963192
+"DEWA","Toms Creek 25",2015,47.75,FALSE,"Downy Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2015,47.75,FALSE,"Downy Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2019,48,FALSE,"Hairy Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2023,37.5,FALSE,"Red-bellied Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,47,FALSE,"Downy Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,47,FALSE,"Red-bellied Woodpecker",4,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,46.5,FALSE,"Hairy Woodpecker",3,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,46.5,FALSE,"Downy Woodpecker",3,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,46.5,FALSE,"Downy Woodpecker",3,41.141514,-74.963585
+"DEWA","Toms Creek 25",2025,51,FALSE,"Downy Woodpecker",3,41.143306,-74.963319
+"DEWA","Toms Creek 25",2025,49.25,FALSE,"Red-bellied Woodpecker",3,41.143306,-74.963319
+"DEWA","Toms Creek 25",2025,50.5,FALSE,"Pileated Woodpecker",3,41.143306,-74.963319
+"DEWA","UNT Dingmans Creek 07",2015,49.5,TRUE,"Pileated Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2019,46.5,FALSE,"Pileated Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2023,36,TRUE,"Downy Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2023,36,TRUE,"Downy Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2023,34.5,TRUE,"Downy Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2025,39.25,TRUE,"Red-bellied Woodpecker",3,41.23173,-74.885868
+"DEWA","UNT Dingmans Creek 07",2017,49.75,TRUE,"Downy Woodpecker",1,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2017,49.75,TRUE,"Downy Woodpecker",1,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2023,42,TRUE,"Downy Woodpecker",2,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2023,42,TRUE,"Red-bellied Woodpecker",2,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2023,34.25,TRUE,"Pileated Woodpecker",2,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2025,37.5,TRUE,"Red-bellied Woodpecker",1,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2025,39.25,TRUE,"Pileated Woodpecker",1,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2025,47.75,TRUE,"Hairy Woodpecker",4,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2025,48,TRUE,"Downy Woodpecker",4,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2025,48,TRUE,"Hairy Woodpecker",4,41.233607,-74.885742
+"DEWA","UNT Dingmans Creek 07",2015,44,TRUE,"Hairy Woodpecker",4,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2015,44,TRUE,"Hairy Woodpecker",4,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2015,47,TRUE,"Downy Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2017,39.75,FALSE,"Red-bellied Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2019,45,TRUE,"Hairy Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2023,39,TRUE,"Downy Woodpecker",4,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2023,39,TRUE,"Hairy Woodpecker",4,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2023,38,TRUE,"Red-bellied Woodpecker",4,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2023,37.75,TRUE,"Pileated Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2023,35.5,TRUE,"Red-bellied Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2025,40,TRUE,"Red-bellied Woodpecker",5,41.235308,-74.886034
+"DEWA","UNT Dingmans Creek 07",2025,40,TRUE,"Red-bellied Woodpecker",5,41.235308,-74.886034
+"DEWA","Vancampens Brook 22",2017,43.5,FALSE,"Downy Woodpecker",2,41.063406,-74.9861
+"DEWA","Vancampens Brook 22",2017,43.25,FALSE,"Red-bellied Woodpecker",1,41.064718,-74.984339
+"DEWA","Vancampens Brook 22",2019,44.5,FALSE,"Pileated Woodpecker",5,41.065868,-74.982584
+"DEWA","Vancampens Brook 22",2023,43.75,FALSE,"Red-bellied Woodpecker",1,41.065868,-74.982584
+"DEWA","Vancampens Brook 22",2025,38.5,FALSE,"Red-bellied Woodpecker",5,41.065868,-74.982584
+"DEWA","Vancampens Brook 22",2025,38.5,FALSE,"Red-bellied Woodpecker",5,41.065868,-74.982584
+"DEWA","UNT Vancampens Brook 05",2015,49.5,FALSE,"Hairy Woodpecker",2,41.08832,-74.943633
+"DEWA","UNT Vancampens Brook 05",2025,39.5,FALSE,"Hairy Woodpecker",3,41.08832,-74.943633
+"DEWA","UNT Vancampens Brook 05",2015,47.5,FALSE,"Hairy Woodpecker",4,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2015,47.75,FALSE,"Red-bellied Woodpecker",4,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2017,41.5,FALSE,"Downy Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2017,41.5,FALSE,"Downy Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2019,47.5,FALSE,"Hairy Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2019,48.25,FALSE,"Hairy Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2025,46.25,FALSE,"Pileated Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2025,46.25,FALSE,"Red-bellied Woodpecker",3,41.087053,-74.942297
+"DEWA","UNT Vancampens Brook 05",2015,49.25,FALSE,"Red-bellied Woodpecker",3,41.085603,-74.940515
+"DEWA","UNT Vancampens Brook 05",2025,47.5,FALSE,"Red-bellied Woodpecker",3,41.085603,-74.940515
+"DEWA","Adams Creek 03",2017,53,FALSE,"Pileated Woodpecker",3,41.240362,-74.867861
+"DEWA","Adams Creek 03",2019,53.25,FALSE,"Pileated Woodpecker",3,41.241412,-74.869488
+"DEWA","Adams Creek 03",2023,47.5,FALSE,"Red-bellied Woodpecker",4,41.241412,-74.869488
+"DEWA","Adams Creek 03",2025,48,FALSE,"Pileated Woodpecker",3,41.241412,-74.869488
+"DEWA","Adams Creek 03",2015,53.75,FALSE,"Pileated Woodpecker",3,41.242589,-74.871547
+"DEWA","Adams Creek 03",2019,49,FALSE,"Hairy Woodpecker",4,41.242589,-74.871547
+"DEWA","Adams Creek 03",2019,49,FALSE,"Pileated Woodpecker",4,41.242589,-74.871547
+"DEWA","Adams Creek 03",2019,48.25,FALSE,"Pileated Woodpecker",4,41.242589,-74.871547
+"DEWA","Adams Creek 03",2023,48,FALSE,"Hairy Woodpecker",4,41.242589,-74.871547
+"DEWA","Adams Creek 03",2023,55.5,FALSE,"Hairy Woodpecker",4,41.242589,-74.871547
+"DEWA","White Brook 15",2015,51.5,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2017,37.5,FALSE,"Red-bellied Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2017,39.25,FALSE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2017,39.25,FALSE,"Red-bellied Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2019,47.5,FALSE,"Pileated Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2019,46.5,FALSE,"Pileated Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,36.25,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,36.25,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,36.25,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,36.25,TRUE,"Red-bellied Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,35.5,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2023,35.5,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,45,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,46,TRUE,"Pileated Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,46,TRUE,"Downy Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,46,TRUE,"Red-bellied Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,46,TRUE,"Pileated Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2025,46,TRUE,"Red-bellied Woodpecker",2,41.296372,-74.796334
+"DEWA","White Brook 15",2015,44,TRUE,"Red-bellied Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2015,44,TRUE,"Pileated Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2015,45.25,TRUE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2017,42.75,TRUE,"Red-bellied Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2017,42.75,TRUE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2017,42.75,TRUE,"Hairy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2017,38.5,FALSE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2019,40.75,FALSE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2023,36.75,TRUE,"Hairy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2023,40,TRUE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2023,40,TRUE,"Downy Woodpecker",5,41.29441,-74.795445
+"DEWA","White Brook 15",2017,38.5,TRUE,"Red-bellied Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2017,42.25,TRUE,"Downy Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2019,40,TRUE,"Pileated Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,38,TRUE,"Downy Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,38,TRUE,"Red-bellied Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,40,TRUE,"Red-bellied Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,36,TRUE,"Red-bellied Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,37.75,TRUE,"Downy Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2023,37.75,TRUE,"Downy Woodpecker",5,41.293454,-74.793732
+"DEWA","White Brook 15",2025,45.75,TRUE,"Downy Woodpecker",5,41.293454,-74.793732
+"DEWA","Sand Hill Creek 08",2023,58,TRUE,"Red-bellied Woodpecker",3,41.083222,-75.012295
+"DEWA","Sand Hill Creek 08",2025,41.75,TRUE,"Downy Woodpecker",3,41.083222,-75.012295
+"DEWA","Sand Hill Creek 08",2025,41.75,TRUE,"Downy Woodpecker",3,41.083222,-75.012295
+"DEWA","Sand Hill Creek 08",2025,42.25,TRUE,"Downy Woodpecker",3,41.083222,-75.012295
+"DEWA","Sand Hill Creek 08",2015,50.75,TRUE,"Hairy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2015,49.25,TRUE,"Hairy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2015,49.25,TRUE,"Hairy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2015,50,TRUE,"Red-bellied Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2015,50.5,TRUE,"Red-bellied Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2017,48.5,TRUE,"Pileated Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2017,51.5,TRUE,"Downy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2017,51.5,TRUE,"Pileated Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2017,42.25,TRUE,"Downy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2019,49.5,TRUE,"Downy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2023,48.25,TRUE,"Red-bellied Woodpecker",2,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2023,49.5,TRUE,"Downy Woodpecker",5,41.082105,-75.014279
+"DEWA","Sand Hill Creek 08",2017,48.75,TRUE,"Downy Woodpecker",5,41.082103,-75.016753
+"DEWA","Sand Hill Creek 08",2019,54.5,TRUE,"Downy Woodpecker",3,41.082103,-75.016753
+"DEWA","Yards Creek 07",2023,35.75,FALSE,"Downy Woodpecker",5,41.028826,-75.002853
+"DEWA","Yards Creek 07",2023,36.75,FALSE,"Red-bellied Woodpecker",5,41.028826,-75.002853
+"DEWA","Yards Creek 07",2023,45.75,FALSE,"Red-bellied Woodpecker",5,41.030352,-75.003838
+"DEWA","Yards Creek 07",2025,54.75,FALSE,"Hairy Woodpecker",5,41.030352,-75.003838
+"DEWA","Yards Creek 07",2015,56.5,FALSE,"Downy Woodpecker",5,41.031749,-75.005185
+"DEWA","Yards Creek 07",2015,56.5,FALSE,"Downy Woodpecker",5,41.031749,-75.005185
+"DEWA","Yards Creek 07",2015,56.5,FALSE,"Downy Woodpecker",5,41.031749,-75.005185
+"DEWA","Dingmans Creek 30",2023,51.5,FALSE,"Red-bellied Woodpecker",4,41.230533,-74.894887
+"DEWA","Dingmans Creek 30",2023,40.5,FALSE,"Downy Woodpecker",3,41.230533,-74.894887
+"DEWA","Dingmans Creek 30",2025,44,FALSE,"Red-bellied Woodpecker",3,41.230533,-74.894887
+"DEWA","Dingmans Creek 30",2025,43.25,FALSE,"Downy Woodpecker",3,41.230533,-74.894887
+"DEWA","Dingmans Creek 30",2025,43.25,FALSE,"Red-bellied Woodpecker",3,41.230533,-74.894887
+"DEWA","Dingmans Creek 30",2019,51.25,FALSE,"Downy Woodpecker",3,41.229776,-74.897088
+"DEWA","Dingmans Creek 30",2025,42.5,FALSE,"Downy Woodpecker",3,41.229776,-74.897088
+"DEWA","Dingmans Creek 30",2017,47,FALSE,"Hairy Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2023,36.5,FALSE,"Red-bellied Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2023,39.5,FALSE,"Hairy Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2023,39.5,FALSE,"Pileated Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2023,39.25,FALSE,"Pileated Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2025,40.25,FALSE,"Red-bellied Woodpecker",3,41.228907,-74.899011
+"DEWA","Dingmans Creek 30",2025,40.25,FALSE,"Hairy Woodpecker",3,41.228907,-74.899011
+"DEWA","Raymondskill Creek 13",2019,59,FALSE,"Pileated Woodpecker",3,41.293402,-74.845805
+"DEWA","Raymondskill Creek 13",2017,44,FALSE,"Downy Woodpecker",3,41.29503,-74.845272
+"DEWA","Raymondskill Creek 13",2023,47,FALSE,"Pileated Woodpecker",3,41.296024,-74.843093
+"DEWA","Dunnfield Creek 26",2017,38.5,FALSE,"Red-bellied Woodpecker",3,40.982735,-75.107444
+"DEWA","Dunnfield Creek 26",2025,39.75,FALSE,"Red-bellied Woodpecker",3,40.982735,-75.107444
+"DEWA","Dunnfield Creek 26",2015,51.5,FALSE,"Hairy Woodpecker",3,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2015,51.5,FALSE,"Hairy Woodpecker",3,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2017,39.25,FALSE,"Downy Woodpecker",3,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2019,48.25,FALSE,"Pileated Woodpecker",4,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2023,37.5,FALSE,"Hairy Woodpecker",3,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2025,47.5,FALSE,"Downy Woodpecker",3,40.983581,-75.105582
+"DEWA","Dunnfield Creek 26",2017,46,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2017,45.75,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2023,36.75,FALSE,"Red-bellied Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2023,36.75,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2023,36.5,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2023,36.5,FALSE,"Red-bellied Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2025,42.75,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Dunnfield Creek 26",2025,45.5,FALSE,"Pileated Woodpecker",3,40.984725,-75.103492
+"DEWA","Toms Creek 03",2017,42.75,FALSE,"Red-bellied Woodpecker",4,41.125593,-74.95518
+"DEWA","Toms Creek 03",2025,45.75,TRUE,"Downy Woodpecker",3,41.125593,-74.95518
+"DEWA","Toms Creek 03",2023,42.75,FALSE,"Downy Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,48.5,FALSE,"Downy Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,48.5,FALSE,"Red-bellied Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,48.75,FALSE,"Red-bellied Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,48.75,FALSE,"Red-bellied Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,46.25,FALSE,"Downy Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2025,43.5,FALSE,"Downy Woodpecker",3,41.127289,-74.956282
+"DEWA","Toms Creek 03",2015,52,FALSE,"Pileated Woodpecker",3,41.128772,-74.957765
+"DEWA","Hornbecks Creek 15",2017,42,FALSE,"Downy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2017,41.25,FALSE,"Downy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2017,40.5,FALSE,"Downy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2017,40.5,FALSE,"Downy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2019,43,FALSE,"Pileated Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2023,39.25,FALSE,"Downy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2025,38.5,FALSE,"Pileated Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2025,38.5,FALSE,"Pileated Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2025,37.5,FALSE,"Pileated Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2025,37.5,FALSE,"Hairy Woodpecker",3,41.192493,-74.897827
+"DEWA","Hornbecks Creek 15",2025,40.5,FALSE,"Red-bellied Woodpecker",3,41.19387,-74.899981
+"DEWA","Hornbecks Creek 15",2023,39,FALSE,"Pileated Woodpecker",3,41.19456,-74.901838
+"DEWA","Hornbecks Creek 15",2025,52.75,FALSE,"Downy Woodpecker",3,41.19456,-74.901838
+"DEWA","Hornbecks Creek 15",2025,53,FALSE,"Pileated Woodpecker",3,41.19456,-74.901838
+"DEWA","Hornbecks Creek 15",2025,40.5,FALSE,"Downy Woodpecker",3,41.19456,-74.901838
+"DEWA","Mill Creek 12 (DEWA)",2023,40.5,FALSE,"Pileated Woodpecker",4,41.159581,-74.922129
+"DEWA","Mill Creek 12 (DEWA)",2025,46.5,FALSE,"Downy Woodpecker",3,41.159581,-74.922129
+"DEWA","Mill Creek 12 (DEWA)",2025,46.5,FALSE,"Pileated Woodpecker",3,41.159581,-74.922129
+"DEWA","Mill Creek 12 (DEWA)",2017,59.25,FALSE,"Pileated Woodpecker",3,41.158985,-74.924195
+"DEWA","Mill Creek 12 (DEWA)",2017,38.25,FALSE,"Pileated Woodpecker",3,41.160367,-74.926171
+"DEWA","Mill Creek 12 (DEWA)",2017,41.25,FALSE,"Pileated Woodpecker",2,41.160367,-74.926171
+"DEWA","Mill Creek 12 (DEWA)",2023,35,FALSE,"Red-bellied Woodpecker",3,41.160367,-74.926171
+"DEWA","Vancampens Brook 76",2019,46.5,FALSE,"Hairy Woodpecker",4,41.089462,-74.943158
+"DEWA","Vancampens Brook 76",2023,38,FALSE,"Downy Woodpecker",3,41.089462,-74.943158
+"DEWA","Vancampens Brook 76",2023,35.5,FALSE,"Hairy Woodpecker",3,41.089462,-74.943158
+"DEWA","Vancampens Brook 76",2015,47,FALSE,"Downy Woodpecker",2,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2015,46.5,FALSE,"Hairy Woodpecker",2,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2015,46.5,FALSE,"Hairy Woodpecker",2,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2017,37.25,FALSE,"Hairy Woodpecker",2,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2017,37.25,FALSE,"Pileated Woodpecker",2,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2019,43.25,FALSE,"Pileated Woodpecker",3,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2023,35,FALSE,"Pileated Woodpecker",3,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2023,35,FALSE,"Downy Woodpecker",3,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2025,44.25,FALSE,"Downy Woodpecker",3,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2025,36.75,FALSE,"Red-bellied Woodpecker",3,41.090422,-74.941028
+"DEWA","Vancampens Brook 76",2017,33.75,FALSE,"Hairy Woodpecker",3,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2017,33.5,FALSE,"Red-bellied Woodpecker",2,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2019,41.5,FALSE,"Pileated Woodpecker",4,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2023,38.75,FALSE,"Red-bellied Woodpecker",3,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2023,38.75,FALSE,"Pileated Woodpecker",3,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2023,38.75,FALSE,"Pileated Woodpecker",3,41.091462,-74.939078
+"DEWA","Vancampens Brook 76",2023,33,FALSE,"Hairy Woodpecker",3,41.091462,-74.939078
+"DEWA","Adams Creek 21",2025,49,FALSE,"Downy Woodpecker",3,41.251692,-74.881968
+"DEWA","Adams Creek 21",2019,44.5,FALSE,"Hairy Woodpecker",4,41.253534,-74.882931
+"DEWA","Adams Creek 21",2023,40.75,FALSE,"Downy Woodpecker",3,41.253534,-74.882931
+"DEWA","Adams Creek 21",2023,39.25,FALSE,"Downy Woodpecker",3,41.253534,-74.882931
+"DEWA","Adams Creek 21",2025,38.5,FALSE,"Red-bellied Woodpecker",3,41.253534,-74.882931
+"DEWA","Adams Creek 21",2015,58.5,FALSE,"Pileated Woodpecker",3,41.254812,-74.884148
