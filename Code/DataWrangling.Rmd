@@ -22,10 +22,13 @@ pointcount_detection <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_
 
 ```
 
-```{r, change date objects}
+```{r, change date objects and create year column}
 
 pointcount_detection$Start_Date_ISO <- ymd(pointcount_detection$Start_Date_ISO)
 class(pointcount_detection$Start_Date_ISO)
+
+pointcount_detection <- pointcount_detection %>%
+  mutate(Year = year(Start_Date_ISO))
 
 ```
 
@@ -34,12 +37,13 @@ class(pointcount_detection$Start_Date_ISO)
 pointcount_detection_trim <- select(pointcount_detection,
                           Unit_Code,
                           Site_Name,
-                          Start_Date_ISO,
-                          Observer_Initials,
+                          Year,
                           Ambient_Noise,
                           Road_Noise,
                           Common_Name,
                           Hemlock_Condition_Score,
+                          Latitude,
+                          Longitude
                           )
 
 ```
@@ -53,37 +57,75 @@ detection_final <- pointcount_detection_trim %>%
 
 ```
 
-```{r, filter dataframe for only woodpeckers. Group by location, site, date, observer ambient noise, road noise, and hemlock condition to see how many of each grouping occurs over time}
+```{r, filter dataframe for only woodpeckers in the Delaware River Gap}
 
-woodpeckers_detection <- detection_final %>%
+woodpeckers_delaware <- detection_final %>%
   filter(Common_Name %in% c("Downy Woodpecker",
                             "Pileated Woodpecker",
                             "Red-bellied Woodpecker",
                             "Hairy Woodpecker")) %>%
-                      group_by(Unit_Code,
-                             Site_Name,
-                             Start_Date_ISO,
-                             Observer_Initials,
-                             Common_Name,
-                             Ambient_Noise,
-                             Road_Noise,
-                             Hemlock_Condition_Score) %>%
-                    summarise(count = n())
+  filter(Unit_Code %in% c("DEWA"))
                    
 ```
 
-```{r, changing column names for clarity}
-woodpeckers_detection<-woodpeckers_detection %>%
-  rename(National_Park = Unit_Code) %>%
-  rename(Detection_Date = Start_Date_ISO) %>%
-  rename(Detection_Count = count)
+```{r, changing column name for clarity}
+woodpeckers_delaware <-woodpeckers_delaware %>%
+  rename(National_Park = Unit_Code)
 
 ```
 
+
+```{r, change hemlock of 0 to 5 for continous scale of better 1 to worse 5}
+
+woodpeckers_delaware <- woodpeckers_delaware %>%
+  mutate(Hemlock_Condition_Score = ifelse(
+    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
+
+
+```
+
+
+```{r, group by site name, year, and common name}
+woodpeckers_grouped <-woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name) %>%
+  summarise(Detection_Count = n())
+
+```
+
+
+```{r, group by site name, year, common name and then the possible explanatory variables (ambient noise, road noise, and hemlock condition)}
+
+ambient_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Ambient_Noise) %>%
+  summarise(Detection_Count = n())
+
+road_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Road_Noise) %>%
+  summarise(Detection_Count = n())
+
+hemlock_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Hemlock_Condition_Score) %>%
+  summarise(Detection_Count = n())
+
+```
+
+
 ```{r, place the processed dataset into the processed folder}
 
-write.csv(woodpeckers_detection, row.names = FALSE, 
-          file = here("Data","Processed","Woodpeckers_Detection.csv"))
+write.csv(woodpeckers_delaware, row.names = FALSE, 
+          file = here("Data","Processed","Woodpeckers_Delaware.csv"))
+
+write.csv(woodpeckers_grouped, row.names = FALSE, 
+          file = here("Data","Processed","Woodpeckers_Grouped.csv"))
+
+write.csv(ambient_grouped, row.names = FALSE, 
+          file = here("Data","Processed","Ambient_Grouped.csv"))
+
+write.csv(road_grouped, row.names = FALSE, 
+          file = here("Data","Processed","Road_Grouped.csv"))
+
+write.csv(hemlock_grouped, row.names = FALSE, 
+          file = here("Data","Processed","Hemlock_Grouped.csv"))
 
 ```
 
