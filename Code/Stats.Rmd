@@ -1,0 +1,20 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, One-way ANOVA test on hemlock tree abundance}
+
+
+```
+
+```{r, singular linear regression for ambient noise}
+
+
+```
+
+```{r, t-test for road noise}
+
+
+```
