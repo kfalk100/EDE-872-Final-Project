@@ -29,6 +29,9 @@ Woodpeckers_Grouped <- read.csv(here("Data/Processed/Woodpeckers_Grouped.csv"))
 # For Presence/Nonpresence
 Woodpeckers_Delaware <- read.csv(here("Data/Processed/Woodpeckers_Delaware.csv"))
 # Comprehensive
+Woodpeckers_Date <- read.csv(here("Data/Processed/Dateincluded_Woodpeckers.csv"))
+Woodpeckers_Date$Detection_Date <- ymd(Woodpeckers_Date$Detection_Date)
+
 
 ```
 
@@ -41,14 +44,11 @@ Woodpeckers_GroupedTrim <- Woodpeckers_Grouped %>%
   group_by(Year, Common_Name) %>% 
   summarise(Total_Detections = sum(Detection_Count))
   
-  
-# knitr::kable(nutrient_data_tn, caption = "Summary of Total Nitrogen") # Knitting assigns caption of: Table 1: Summary of Total Nitrogen
-# colons mean aligned to that side
-# can rename column names
+summary(Woodpeckers_GroupedTrim$Total_Detections)
 
 ```
 
-``` {r Line Plot of Species Appearance Over Time}
+``` {r / Line Plot of Species Appearance Over Time}
 Species_over_time <- 
   ggplot(Woodpeckers_GroupedTrim, 
          aes(x=Year,
@@ -60,25 +60,40 @@ Species_over_time <-
     y="Number of Detections",
     title="Woodpecker Species Appearance (2014-2025)",
     color="Species"
-  )
+  ) +
+  scale_x_continuous(breaks=c(2014:2025))
 Species_over_time
 ```
 
 ``` {r / Line Plot of Ambient Noise Over Time}
 Noise_over_time <- 
-  ggplot(Ambient_Noise,
-         aes(x=Year,
-             y=Ambient_Noise)) +
+  ggplot(Woodpeckers_Date,
+         aes(x=Detection_Date,
+             y=Ambient_Noise,
+             color=Common_Name)) +
   geom_point() +
   labs(
-    x="Year",
-    y="Ambient Noise (dB)"
-  )
+    x="Date",
+    y="Ambient Noise (dB)",
+    title="Ambient Noise Levels for Woodpecker Species Observations (2014-2025)",
+    color="Species") +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  scale_y_continuous(breaks = c(30, 35, 40, 45, 50, 55, 60, 65))
+
 Noise_over_time
+
 
 ```
 
 ``` {r / Line Plot or Scatter Plot of Hemlock Condition Over Time}
+Hemlock_over_time <-
+  ggplot(Hemlock_Condition,
+         aes(x=Year,
+             y=Hemlock_Condition_Score))
+
+```
+
+``` {r / Comparison of Hemlock Condition and Detection Count}
 
 
 ```
