@@ -38,7 +38,7 @@ TheTheme <- theme_solarized(base_size = 12) +
                               legend.position = "right",
                               legend.text = element_text(size = 8, color = "black"),
                               legend.title = element_text(size = 10, color = "black", face = "bold"),
-                              axis.title = element_text(size = 11, color = "black", face = "bold"),
+                              axis.title = element_text(size = 10, color = "black", face = "bold"),
                               plot.title = element_text(size = 11, color = "black", face = "bold"),
                               )
 theme_set(TheTheme)
@@ -67,10 +67,10 @@ Species_over_time <-
     x="Year",
     y="Number of Detections",
     title="Woodpecker Species Appearance (2014-2025)",
-    color="Species"
-  ) +
+    color="Species") +
   scale_x_continuous(breaks=seq(2015,2025, by=2))
 Species_over_time + scale_color_brewer(palette="Dark2")
+
 ```
 
 ``` {r Ambient Noise Averages}
@@ -97,10 +97,10 @@ Noise_over_time <-
     title="Ambient Noise Levels (2014-2025)",
     color="Species") +
   scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
-  scale_y_continuous(breaks = c(30, 35, 40, 45, 50, 55, 60, 65))
+  scale_y_continuous(breaks = c(30, 35, 40, 45, 50, 55, 60, 65)) +
+  geom_smooth(method = lm, se = FALSE, size = 0.5)
 
 Noise_over_time + scale_color_brewer(palette="Dark2")
-
 
 ```
 
@@ -116,29 +116,62 @@ AverageAmbientPlot <-
     y="Average Ambient Noise (dB)",
     title="Average Ambient Noise Levels (2014-2025)",
     color="Species") +
-  scale_y_continuous(breaks = c(38, 40, 42, 44, 46, 48, 50, 52)) +
+  scale_y_continuous(breaks = seq(36,52, by=2)) +
   scale_x_continuous(breaks=seq(2015,2025, by=2))
 
 AverageAmbientPlot + scale_color_brewer(palette="Dark2")
-  
+
+```
+
+``` {r Road Noise Proportions}
+RoadNoiseProportionPerYear <- Road_Noise %>% 
+  select(c(Year:Detection_Count)) %>% 
+  group_by(Year, Road_Noise, Common_Name) %>% 
+  summarise(Count = sum(Detection_Count))
+
+RoadNoisePlot <- 
+  ggplot(RoadNoiseProportionPerYear,
+         aes(fill = Common_Name,
+             y = Count,
+             x = Year)) +
+  geom_bar(position = "stack", stat = "identity") + 
+  facet_wrap(~Road_Noise) +
+  scale_x_continuous(breaks=seq(2015,2025, by=2)) +
+  labs(x = "Year",
+       y = "Observation Count",
+       title = "Road Noise Presence per Observation (2014-2025)") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+RoadNoisePlot + scale_fill_brewer(palette="Dark2")
+
+```
+
+``` {r Hemlock Average per Year}
+Hemlock_Score_Average <- Hemlock_Condition %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Hemlock = mean(Hemlock_Condition_Score))
 
 ```
 
 ``` {r / Line Plot or Scatter Plot of Hemlock Condition Over Time}
 Hemlock_over_time <-
-  ggplot(Hemlock_Condition,
+  ggplot(Hemlock_Score_Average,
          aes(x=Year,
-             y=Hemlock_Condition_Score,
+             y=Average_Hemlock,
              color=Common_Name)) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, size = 0.5) +
+  scale_x_continuous(breaks = seq(2015,2025, by = 2)) +
+  scale_y_continuous(breaks = seq(0,5, by = 1)) +
+  labs(title = "Average Hemlock Score for All Sites (2014-2025)",
+       x = "Year",
+       y = "Average Hemlock Score")
+  
+Hemlock_over_time + scale_color_brewer(palette="Dark2")
 
-Hemlock_over_time
 ```
 
-``` {r / Comparison of Hemlock Condition and Detection Count}
-
-
-```
 
 ``` {r / Graph Monitoring Sites}
 ObservationSites <- Woodpeckers_Delaware %>% 
@@ -153,17 +186,31 @@ MonitoringSites <- mapview(ObservationSites,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
 MonitoringSites
 
-
 ```
 
 ``` {r Plot Species Observation Spatially}
+Ambient_Noise_AveragePerSite <- Woodpeckers_Date %>% 
+  select(c(Detection_Date:Longitude)) %>% 
+  group_by(Latitude, Longitude) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+  
+summary(Ambient_Noise_Average$Average_Noise)
 
-MonitoringSitesFrequency <- ObservationSites, 
-        cex = ,
-        col.regions = "firebrick",
-        layer.name = "Observation Sites",
+AverageNoisePerSiteSF <-Ambient_Noise_AveragePerSite %>% 
+   st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+
+---
+  
+Hemlock_
+
+MonitoringSitesNoise <- mapview(AverageNoisePerSiteSF, 
+        zcol = 'Average_Noise',
+        alpha.regions = 0.4,
+        layer.name = "Ambient Noise Level",
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
-MonitoringSites
-
+AllVariablesMapview <- mapview(MonitoringSitesNoise) +
+  mapview()
 
 ```
