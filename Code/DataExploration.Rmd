@@ -5,23 +5,21 @@ editor_options:
   chunk_output_type: console
 ---
 
-``` {r / Install Packages and Establish Working Directory, warning=FALSE, echo=FALSE, include=FALSE}
-install.packages("lubridate")
-install.packages("ggplot2")
-install.packages("mapview")
-install.packages("tidyverse")
-install.packages("here")
-
+``` {r Establish Working Directory, warning=FALSE, echo=FALSE, include=FALSE}
 library(lubridate)
 library(ggplot2)
 library(mapview)
 library(tidyverse)
 library(here)
+library(ggthemes)
+library(RColorBrewer)
+library(sf)
+library(leaflet)
 
 here()
 ```
 
-``` {r / Set Environment}
+``` {r Set Environment}
 Ambient_Noise <- read.csv(here("Data/Processed/Ambient_Grouped.csv"))
 Hemlock_Condition <- read.csv(here("Data/Processed/Hemlock_Grouped.csv"))
 Road_Noise <- read.csv(here("Data/Processed/Road_Grouped.csv"))
@@ -32,10 +30,20 @@ Woodpeckers_Delaware <- read.csv(here("Data/Processed/Woodpeckers_Delaware.csv")
 Woodpeckers_Date <- read.csv(here("Data/Processed/Dateincluded_Woodpeckers.csv"))
 Woodpeckers_Date$Detection_Date <- ymd(Woodpeckers_Date$Detection_Date)
 
-
 ```
 
+``` {r Set Theme}
+TheTheme <- theme_solarized(base_size = 12) +
+  theme(axis.text = element_text(color="black"),
+                              legend.position = "right",
+                              legend.text = element_text(size = 8, color = "black"),
+                              legend.title = element_text(size = 10, color = "black", face = "bold"),
+                              axis.title = element_text(size = 11, color = "black", face = "bold"),
+                              plot.title = element_text(size = 11, color = "black", face = "bold"),
+                              )
+theme_set(TheTheme)
 
+```
 
 ``` {r Table of Woodpecker Appearance per Year}
 Woodpeckers_GroupedTrim <- Woodpeckers_Grouped %>% 
@@ -61,11 +69,22 @@ Species_over_time <-
     title="Woodpecker Species Appearance (2014-2025)",
     color="Species"
   ) +
-  scale_x_continuous(breaks=c(2014:2025))
-Species_over_time
+  scale_x_continuous(breaks=seq(2015,2025, by=2))
+Species_over_time + scale_color_brewer(palette="Dark2")
 ```
 
-``` {r / Line Plot of Ambient Noise Over Time}
+``` {r Ambient Noise Averages}
+Ambient_Noise_Average <- Ambient_Noise %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+  
+summary(Ambient_Noise_Average$Average_Noise)
+
+```
+
+``` {r / Scatter Plot of Ambient Noise Over Time}
 Noise_over_time <- 
   ggplot(Woodpeckers_Date,
          aes(x=Detection_Date,
@@ -75,13 +94,33 @@ Noise_over_time <-
   labs(
     x="Date",
     y="Ambient Noise (dB)",
-    title="Ambient Noise Levels for Woodpecker Species Observations (2014-2025)",
+    title="Ambient Noise Levels (2014-2025)",
     color="Species") +
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
   scale_y_continuous(breaks = c(30, 35, 40, 45, 50, 55, 60, 65))
 
-Noise_over_time
+Noise_over_time + scale_color_brewer(palette="Dark2")
 
+
+```
+
+``` {r Line Plot of Average Ambient Noise}
+AverageAmbientPlot <-
+  ggplot(Ambient_Noise_Average,
+         aes(x=Year,
+             y=Average_Noise,
+             color=Common_Name)) +
+  geom_line() +
+  labs(
+    x="Year",
+    y="Average Ambient Noise (dB)",
+    title="Average Ambient Noise Levels (2014-2025)",
+    color="Species") +
+  scale_y_continuous(breaks = c(38, 40, 42, 44, 46, 48, 50, 52)) +
+  scale_x_continuous(breaks=seq(2015,2025, by=2))
+
+AverageAmbientPlot + scale_color_brewer(palette="Dark2")
+  
 
 ```
 
@@ -89,8 +128,11 @@ Noise_over_time
 Hemlock_over_time <-
   ggplot(Hemlock_Condition,
          aes(x=Year,
-             y=Hemlock_Condition_Score))
+             y=Hemlock_Condition_Score,
+             color=Common_Name)) +
+  geom_point()
 
+Hemlock_over_time
 ```
 
 ``` {r / Comparison of Hemlock Condition and Detection Count}
@@ -99,8 +141,29 @@ Hemlock_over_time <-
 ```
 
 ``` {r / Graph Monitoring Sites}
+ObservationSites <- Woodpeckers_Delaware %>% 
+  st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+
+MonitoringSites <- mapview(ObservationSites, 
+        cex = 4,
+        col.regions = "firebrick",
+        layer.name = "Observation Sites",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+MonitoringSites
 
 
 ```
 
-``` {r }
+``` {r Plot Species Observation Spatially}
+
+MonitoringSitesFrequency <- ObservationSites, 
+        cex = ,
+        col.regions = "firebrick",
+        layer.name = "Observation Sites",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+MonitoringSites
+
+
+```
