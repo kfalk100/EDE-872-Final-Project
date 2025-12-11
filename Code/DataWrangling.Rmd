@@ -157,8 +157,7 @@ dateincluded_woodpeckers <- dateincluded_trim %>%
   mutate(Hemlock_Condition_Score = ifelse(
     Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
 
-write.csv(dateincluded_woodpeckers, row.names = FALSE, 
-          file = here("Data","Processed","Dateincluded_Woodpeckers.csv"))
+
 
 ```
 
