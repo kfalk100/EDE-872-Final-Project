@@ -40,6 +40,15 @@ The dataset used in this analysis was downloaded from the [Data.gov](https://cat
 
 The data was collected during the months of May and June from 2011-2025. Each park consisted of multiple sites with each site having three point count stations. The sites were sampled repeatedly, typically four times annually. Point counts were conducted for ten minutes each, providing ample data on the bird species detected.
 
+| Information    | Description                                                                                                                      |
+|----------------------|--------------------------------------------------|
+| Data Publisher | Department of the Interior - National Park Service                                                                               |
+| Data Source    | <https://catalog.data.gov/dataset/streamside-bird-monitoring-data-in-eastern-rivers-and-mountains-network-parks-2011-2025-da>    |
+| Variables Used | National Park, Site Name, Observation Date, Ambient Noise, Road Noise, Common Name, Hemlock Condition Score, Latitude, Longitude |
+| Data Range     | May 27th, 2011 to May 19th, 2025                                                                                                 |
+
+: **Figure 1:** Dataset Information
+
 # 4) Data Wrangling
 
 ```{r setup, include=FALSE}
