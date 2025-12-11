@@ -56,19 +56,19 @@
 "Deckers Creek 03",2024,"Downy Woodpecker",3,2
 "Deckers Creek 03",2024,"Pileated Woodpecker",3,4
 "Deckers Creek 03",2024,"Red-bellied Woodpecker",3,1
-"Dingmans Creek 05",2014,"Red-bellied Woodpecker",5,2
+"Dingmans Creek 05",2014,"Red-bellied Woodpecker",0,2
+"Dingmans Creek 05",2016,"Downy Woodpecker",0,5
 "Dingmans Creek 05",2016,"Downy Woodpecker",2,1
-"Dingmans Creek 05",2016,"Downy Woodpecker",5,5
-"Dingmans Creek 05",2016,"Pileated Woodpecker",5,2
+"Dingmans Creek 05",2016,"Pileated Woodpecker",0,2
 "Dingmans Creek 05",2018,"Downy Woodpecker",2,2
-"Dingmans Creek 05",2018,"Red-bellied Woodpecker",5,1
+"Dingmans Creek 05",2018,"Red-bellied Woodpecker",0,1
 "Dingmans Creek 05",2022,"Downy Woodpecker",1,1
-"Dingmans Creek 05",2022,"Pileated Woodpecker",5,1
+"Dingmans Creek 05",2022,"Pileated Woodpecker",0,1
+"Dingmans Creek 05",2022,"Red-bellied Woodpecker",0,1
 "Dingmans Creek 05",2022,"Red-bellied Woodpecker",3,1
-"Dingmans Creek 05",2022,"Red-bellied Woodpecker",5,1
+"Dingmans Creek 05",2024,"Downy Woodpecker",0,1
 "Dingmans Creek 05",2024,"Downy Woodpecker",3,3
-"Dingmans Creek 05",2024,"Downy Woodpecker",5,1
-"Dingmans Creek 05",2024,"Pileated Woodpecker",5,3
+"Dingmans Creek 05",2024,"Pileated Woodpecker",0,3
 "Dingmans Creek 05",2024,"Red-bellied Woodpecker",3,1
 "Dingmans Creek 30",2017,"Hairy Woodpecker",3,1
 "Dingmans Creek 30",2019,"Downy Woodpecker",3,1
@@ -107,9 +107,9 @@
 "Dingmans Creek 57",2024,"Red-bellied Woodpecker",3,1
 "Dunnfield Creek 03",2014,"Red-bellied Woodpecker",3,1
 "Dunnfield Creek 03",2016,"Downy Woodpecker",4,1
-"Dunnfield Creek 03",2018,"Downy Woodpecker",5,2
+"Dunnfield Creek 03",2018,"Downy Woodpecker",0,2
 "Dunnfield Creek 03",2018,"Hairy Woodpecker",3,1
-"Dunnfield Creek 03",2022,"Downy Woodpecker",5,1
+"Dunnfield Creek 03",2022,"Downy Woodpecker",0,1
 "Dunnfield Creek 03",2022,"Pileated Woodpecker",3,1
 "Dunnfield Creek 03",2024,"Downy Woodpecker",3,3
 "Dunnfield Creek 03",2024,"Red-bellied Woodpecker",3,2
@@ -132,26 +132,26 @@
 "Hornbecks Creek 15",2025,"Hairy Woodpecker",3,1
 "Hornbecks Creek 15",2025,"Pileated Woodpecker",3,4
 "Hornbecks Creek 15",2025,"Red-bellied Woodpecker",3,1
+"Little Bushkill Creek 01",2014,"Pileated Woodpecker",0,2
 "Little Bushkill Creek 01",2014,"Pileated Woodpecker",2,1
 "Little Bushkill Creek 01",2014,"Pileated Woodpecker",3,2
-"Little Bushkill Creek 01",2014,"Pileated Woodpecker",5,2
-"Little Bushkill Creek 01",2014,"Red-bellied Woodpecker",5,1
+"Little Bushkill Creek 01",2014,"Red-bellied Woodpecker",0,1
+"Little Bushkill Creek 01",2016,"Downy Woodpecker",0,2
 "Little Bushkill Creek 01",2016,"Downy Woodpecker",2,1
-"Little Bushkill Creek 01",2016,"Downy Woodpecker",5,2
+"Little Bushkill Creek 01",2016,"Red-bellied Woodpecker",0,2
 "Little Bushkill Creek 01",2016,"Red-bellied Woodpecker",3,2
-"Little Bushkill Creek 01",2016,"Red-bellied Woodpecker",5,2
-"Little Bushkill Creek 01",2018,"Downy Woodpecker",5,3
+"Little Bushkill Creek 01",2018,"Downy Woodpecker",0,3
 "Little Bushkill Creek 01",2018,"Red-bellied Woodpecker",3,1
-"Little Bushkill Creek 01",2022,"Hairy Woodpecker",5,1
-"Little Bushkill Creek 01",2022,"Pileated Woodpecker",5,1
+"Little Bushkill Creek 01",2022,"Hairy Woodpecker",0,1
+"Little Bushkill Creek 01",2022,"Pileated Woodpecker",0,1
+"Little Bushkill Creek 01",2022,"Red-bellied Woodpecker",0,1
 "Little Bushkill Creek 01",2022,"Red-bellied Woodpecker",2,2
-"Little Bushkill Creek 01",2022,"Red-bellied Woodpecker",5,1
+"Little Bushkill Creek 01",2024,"Downy Woodpecker",0,2
 "Little Bushkill Creek 01",2024,"Downy Woodpecker",3,4
-"Little Bushkill Creek 01",2024,"Downy Woodpecker",5,2
-"Little Bushkill Creek 01",2024,"Hairy Woodpecker",5,1
-"Little Bushkill Creek 01",2024,"Pileated Woodpecker",5,1
+"Little Bushkill Creek 01",2024,"Hairy Woodpecker",0,1
+"Little Bushkill Creek 01",2024,"Pileated Woodpecker",0,1
+"Little Bushkill Creek 01",2024,"Red-bellied Woodpecker",0,5
 "Little Bushkill Creek 01",2024,"Red-bellied Woodpecker",3,1
-"Little Bushkill Creek 01",2024,"Red-bellied Woodpecker",5,5
 "Mill Creek 12 (DEWA)",2017,"Pileated Woodpecker",2,1
 "Mill Creek 12 (DEWA)",2017,"Pileated Woodpecker",3,2
 "Mill Creek 12 (DEWA)",2023,"Pileated Woodpecker",4,1
@@ -159,28 +159,28 @@
 "Mill Creek 12 (DEWA)",2025,"Downy Woodpecker",3,1
 "Mill Creek 12 (DEWA)",2025,"Pileated Woodpecker",3,1
 "Mill Creek 25",2014,"Downy Woodpecker",1,2
-"Mill Creek 25",2014,"Red-bellied Woodpecker",5,1
+"Mill Creek 25",2014,"Red-bellied Woodpecker",0,1
 "Mill Creek 25",2016,"Downy Woodpecker",1,2
 "Mill Creek 25",2016,"Pileated Woodpecker",1,1
-"Mill Creek 25",2018,"Downy Woodpecker",5,3
+"Mill Creek 25",2018,"Downy Woodpecker",0,3
+"Mill Creek 25",2018,"Red-bellied Woodpecker",0,3
 "Mill Creek 25",2018,"Red-bellied Woodpecker",2,1
-"Mill Creek 25",2018,"Red-bellied Woodpecker",5,3
-"Mill Creek 25",2022,"Hairy Woodpecker",5,1
-"Mill Creek 25",2024,"Downy Woodpecker",5,3
+"Mill Creek 25",2022,"Hairy Woodpecker",0,1
+"Mill Creek 25",2024,"Downy Woodpecker",0,3
+"Mill Creek 25",2024,"Pileated Woodpecker",0,1
 "Mill Creek 25",2024,"Pileated Woodpecker",2,1
 "Mill Creek 25",2024,"Pileated Woodpecker",3,2
-"Mill Creek 25",2024,"Pileated Woodpecker",5,1
 "Mill Creek 25",2024,"Red-bellied Woodpecker",2,1
 "Raymondskill Creek 13",2017,"Downy Woodpecker",3,1
 "Raymondskill Creek 13",2019,"Pileated Woodpecker",3,1
 "Raymondskill Creek 13",2023,"Pileated Woodpecker",3,1
-"Sand Hill Creek 08",2015,"Hairy Woodpecker",5,3
-"Sand Hill Creek 08",2015,"Red-bellied Woodpecker",5,2
-"Sand Hill Creek 08",2017,"Downy Woodpecker",5,3
-"Sand Hill Creek 08",2017,"Pileated Woodpecker",5,2
+"Sand Hill Creek 08",2015,"Hairy Woodpecker",0,3
+"Sand Hill Creek 08",2015,"Red-bellied Woodpecker",0,2
+"Sand Hill Creek 08",2017,"Downy Woodpecker",0,3
+"Sand Hill Creek 08",2017,"Pileated Woodpecker",0,2
+"Sand Hill Creek 08",2019,"Downy Woodpecker",0,1
 "Sand Hill Creek 08",2019,"Downy Woodpecker",3,1
-"Sand Hill Creek 08",2019,"Downy Woodpecker",5,1
-"Sand Hill Creek 08",2023,"Downy Woodpecker",5,1
+"Sand Hill Creek 08",2023,"Downy Woodpecker",0,1
 "Sand Hill Creek 08",2023,"Red-bellied Woodpecker",2,1
 "Sand Hill Creek 08",2023,"Red-bellied Woodpecker",3,1
 "Sand Hill Creek 08",2025,"Downy Woodpecker",3,3
@@ -236,28 +236,28 @@
 "Toms Creek 25",2025,"Pileated Woodpecker",3,3
 "Toms Creek 25",2025,"Red-bellied Woodpecker",3,1
 "Toms Creek 25",2025,"Red-bellied Woodpecker",4,1
-"UNT Dingmans Creek 07",2015,"Downy Woodpecker",5,1
+"UNT Dingmans Creek 07",2015,"Downy Woodpecker",0,1
 "UNT Dingmans Creek 07",2015,"Hairy Woodpecker",4,2
 "UNT Dingmans Creek 07",2015,"Pileated Woodpecker",3,1
 "UNT Dingmans Creek 07",2017,"Downy Woodpecker",1,2
-"UNT Dingmans Creek 07",2017,"Red-bellied Woodpecker",5,1
-"UNT Dingmans Creek 07",2019,"Hairy Woodpecker",5,1
+"UNT Dingmans Creek 07",2017,"Red-bellied Woodpecker",0,1
+"UNT Dingmans Creek 07",2019,"Hairy Woodpecker",0,1
 "UNT Dingmans Creek 07",2019,"Pileated Woodpecker",3,1
 "UNT Dingmans Creek 07",2023,"Downy Woodpecker",2,1
 "UNT Dingmans Creek 07",2023,"Downy Woodpecker",3,3
 "UNT Dingmans Creek 07",2023,"Downy Woodpecker",4,1
 "UNT Dingmans Creek 07",2023,"Hairy Woodpecker",4,1
+"UNT Dingmans Creek 07",2023,"Pileated Woodpecker",0,1
 "UNT Dingmans Creek 07",2023,"Pileated Woodpecker",2,1
-"UNT Dingmans Creek 07",2023,"Pileated Woodpecker",5,1
+"UNT Dingmans Creek 07",2023,"Red-bellied Woodpecker",0,1
 "UNT Dingmans Creek 07",2023,"Red-bellied Woodpecker",2,1
 "UNT Dingmans Creek 07",2023,"Red-bellied Woodpecker",4,1
-"UNT Dingmans Creek 07",2023,"Red-bellied Woodpecker",5,1
 "UNT Dingmans Creek 07",2025,"Downy Woodpecker",4,1
 "UNT Dingmans Creek 07",2025,"Hairy Woodpecker",4,2
 "UNT Dingmans Creek 07",2025,"Pileated Woodpecker",1,1
+"UNT Dingmans Creek 07",2025,"Red-bellied Woodpecker",0,2
 "UNT Dingmans Creek 07",2025,"Red-bellied Woodpecker",1,1
 "UNT Dingmans Creek 07",2025,"Red-bellied Woodpecker",3,1
-"UNT Dingmans Creek 07",2025,"Red-bellied Woodpecker",5,2
 "UNT Vancampens Brook 05",2015,"Hairy Woodpecker",2,1
 "UNT Vancampens Brook 05",2015,"Hairy Woodpecker",4,1
 "UNT Vancampens Brook 05",2015,"Red-bellied Woodpecker",3,1
@@ -279,24 +279,24 @@
 "Van Campen Creek 12",2024,"Hairy Woodpecker",3,1
 "Vancampens Brook 22",2017,"Downy Woodpecker",2,1
 "Vancampens Brook 22",2017,"Red-bellied Woodpecker",1,1
-"Vancampens Brook 22",2019,"Pileated Woodpecker",5,1
+"Vancampens Brook 22",2019,"Pileated Woodpecker",0,1
 "Vancampens Brook 22",2023,"Red-bellied Woodpecker",1,1
-"Vancampens Brook 22",2025,"Red-bellied Woodpecker",5,2
-"Vancampens Brook 43",2014,"Downy Woodpecker",5,1
-"Vancampens Brook 43",2014,"Pileated Woodpecker",5,1
-"Vancampens Brook 43",2014,"Red-bellied Woodpecker",5,1
+"Vancampens Brook 22",2025,"Red-bellied Woodpecker",0,2
+"Vancampens Brook 43",2014,"Downy Woodpecker",0,1
+"Vancampens Brook 43",2014,"Pileated Woodpecker",0,1
+"Vancampens Brook 43",2014,"Red-bellied Woodpecker",0,1
+"Vancampens Brook 43",2016,"Downy Woodpecker",0,5
 "Vancampens Brook 43",2016,"Downy Woodpecker",4,1
-"Vancampens Brook 43",2016,"Downy Woodpecker",5,5
-"Vancampens Brook 43",2016,"Pileated Woodpecker",5,1
-"Vancampens Brook 43",2016,"Red-bellied Woodpecker",5,3
-"Vancampens Brook 43",2018,"Downy Woodpecker",5,1
-"Vancampens Brook 43",2018,"Pileated Woodpecker",5,4
+"Vancampens Brook 43",2016,"Pileated Woodpecker",0,1
+"Vancampens Brook 43",2016,"Red-bellied Woodpecker",0,3
+"Vancampens Brook 43",2018,"Downy Woodpecker",0,1
+"Vancampens Brook 43",2018,"Pileated Woodpecker",0,4
+"Vancampens Brook 43",2022,"Downy Woodpecker",0,1
 "Vancampens Brook 43",2022,"Downy Woodpecker",2,1
-"Vancampens Brook 43",2022,"Downy Woodpecker",5,1
-"Vancampens Brook 43",2022,"Red-bellied Woodpecker",5,3
-"Vancampens Brook 43",2024,"Downy Woodpecker",5,1
-"Vancampens Brook 43",2024,"Hairy Woodpecker",5,1
-"Vancampens Brook 43",2024,"Red-bellied Woodpecker",5,5
+"Vancampens Brook 43",2022,"Red-bellied Woodpecker",0,3
+"Vancampens Brook 43",2024,"Downy Woodpecker",0,1
+"Vancampens Brook 43",2024,"Hairy Woodpecker",0,1
+"Vancampens Brook 43",2024,"Red-bellied Woodpecker",0,5
 "Vancampens Brook 76",2015,"Downy Woodpecker",2,1
 "Vancampens Brook 76",2015,"Hairy Woodpecker",2,2
 "Vancampens Brook 76",2017,"Hairy Woodpecker",2,1
@@ -314,39 +314,39 @@
 "Vancampens Brook 76",2025,"Red-bellied Woodpecker",3,1
 "Vancampens Brook 95",2014,"Downy Woodpecker",1,2
 "Vancampens Brook 95",2016,"Downy Woodpecker",2,1
+"Vancampens Brook 95",2016,"Pileated Woodpecker",0,2
 "Vancampens Brook 95",2016,"Pileated Woodpecker",1,1
-"Vancampens Brook 95",2016,"Pileated Woodpecker",5,2
+"Vancampens Brook 95",2016,"Red-bellied Woodpecker",0,2
 "Vancampens Brook 95",2016,"Red-bellied Woodpecker",1,4
-"Vancampens Brook 95",2016,"Red-bellied Woodpecker",5,2
-"Vancampens Brook 95",2018,"Pileated Woodpecker",5,1
+"Vancampens Brook 95",2018,"Pileated Woodpecker",0,1
 "Vancampens Brook 95",2022,"Downy Woodpecker",1,1
 "Vancampens Brook 95",2024,"Downy Woodpecker",1,2
 "Vancampens Brook 95",2024,"Downy Woodpecker",2,1
-"Vancampens Brook 95",2024,"Hairy Woodpecker",5,1
+"Vancampens Brook 95",2024,"Hairy Woodpecker",0,1
 "Vancampens Brook 95",2024,"Pileated Woodpecker",1,2
 "Vancampens Brook 95",2024,"Red-bellied Woodpecker",2,1
+"White Brook 15",2015,"Downy Woodpecker",0,1
 "White Brook 15",2015,"Downy Woodpecker",2,1
-"White Brook 15",2015,"Downy Woodpecker",5,1
-"White Brook 15",2015,"Pileated Woodpecker",5,1
-"White Brook 15",2015,"Red-bellied Woodpecker",5,1
+"White Brook 15",2015,"Pileated Woodpecker",0,1
+"White Brook 15",2015,"Red-bellied Woodpecker",0,1
+"White Brook 15",2017,"Downy Woodpecker",0,3
 "White Brook 15",2017,"Downy Woodpecker",2,1
-"White Brook 15",2017,"Downy Woodpecker",5,3
-"White Brook 15",2017,"Hairy Woodpecker",5,1
+"White Brook 15",2017,"Hairy Woodpecker",0,1
+"White Brook 15",2017,"Red-bellied Woodpecker",0,2
 "White Brook 15",2017,"Red-bellied Woodpecker",2,2
-"White Brook 15",2017,"Red-bellied Woodpecker",5,2
-"White Brook 15",2019,"Downy Woodpecker",5,1
+"White Brook 15",2019,"Downy Woodpecker",0,1
+"White Brook 15",2019,"Pileated Woodpecker",0,1
 "White Brook 15",2019,"Pileated Woodpecker",2,2
-"White Brook 15",2019,"Pileated Woodpecker",5,1
+"White Brook 15",2023,"Downy Woodpecker",0,5
 "White Brook 15",2023,"Downy Woodpecker",2,5
-"White Brook 15",2023,"Downy Woodpecker",5,5
-"White Brook 15",2023,"Hairy Woodpecker",5,1
+"White Brook 15",2023,"Hairy Woodpecker",0,1
+"White Brook 15",2023,"Red-bellied Woodpecker",0,3
 "White Brook 15",2023,"Red-bellied Woodpecker",2,1
-"White Brook 15",2023,"Red-bellied Woodpecker",5,3
+"White Brook 15",2025,"Downy Woodpecker",0,1
 "White Brook 15",2025,"Downy Woodpecker",2,2
-"White Brook 15",2025,"Downy Woodpecker",5,1
 "White Brook 15",2025,"Pileated Woodpecker",2,2
 "White Brook 15",2025,"Red-bellied Woodpecker",2,2
-"Yards Creek 07",2015,"Downy Woodpecker",5,3
-"Yards Creek 07",2023,"Downy Woodpecker",5,1
-"Yards Creek 07",2023,"Red-bellied Woodpecker",5,2
-"Yards Creek 07",2025,"Hairy Woodpecker",5,1
+"Yards Creek 07",2015,"Downy Woodpecker",0,3
+"Yards Creek 07",2023,"Downy Woodpecker",0,1
+"Yards Creek 07",2023,"Red-bellied Woodpecker",0,2
+"Yards Creek 07",2025,"Hairy Woodpecker",0,1
