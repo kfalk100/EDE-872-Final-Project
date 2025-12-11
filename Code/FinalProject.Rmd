@@ -51,6 +51,7 @@ The data was collected during the months of May and June from 2011-2025. Each pa
 
 # 4) Data Wrangling
 
+
 ```{r / Install Packages & Establish Working Directory, include=FALSE}
 library(lubridate)
 library(ggplot2)
@@ -104,10 +105,8 @@ woodpeckers_delaware <- pointcount %>%
                             "Hairy Woodpecker")) %>%
   filter(Unit_Code %in% c("DEWA"))%>%
   rename(National_Park = Unit_Code) %>%
-  rename(Detection_Date = Start_Date_ISO)%>%
-  mutate(Hemlock_Condition_Score = ifelse(
-    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
-
+  rename(Detection_Date = Start_Date_ISO
+         
 ```
 
 
@@ -133,27 +132,21 @@ hemlock_grouped <- woodpeckers_delaware %>%
 
 
 ```{r / Woodpecker Species Appearance Per Year and Per Site, include=FALSE}
-
+ ##woodpeckers_groupedtrim
 detections_per_year <- woodpeckers_grouped %>% 
   select(c(Year:Detection_Count)) %>% 
   arrange(Year, Common_Name) %>% 
   group_by(Year, Common_Name) %>% 
   summarise(Total_Detections = sum(Detection_Count))
 
-detections_per_site <- woodpeckers_grouped %>% 
-  select(Site_Name,Common_Name, Detection_Count) %>% 
-  arrange(Site_Name, Common_Name) %>% 
-  group_by(Site_Name, Common_Name) %>% 
-  summarise(Total_Detections = sum(Detection_Count))
-
-total_site_detections <- woodpeckers_grouped %>% 
-  select(Site_Name, Detection_Count)%>% 
-  group_by(Site_Name) %>% 
-  summarise(Total_Detections = sum(Detection_Count))
-
 sites_observations_XY <- woodpeckers_delaware %>%
   select(Site_Name,Latitude,Longitude)%>%
   group_by(Site_Name,Latitude,Longitude)%>%
+  summarise(total_detections = n())
+
+sites_observations_XY_species <- woodpeckers_delaware %>%
+  select(Site_Name,Latitude,Longitude,Common_Name)%>%
+  group_by(Site_Name,Latitude,Longitude,Common_Name)%>%
   summarise(total_detections = n())
 
 ```
@@ -166,36 +159,54 @@ ambient_noise_average <- ambient_grouped %>%
   group_by(Year, Common_Name) %>% 
   summarise(Average_Noise = mean(Ambient_Noise))
 
+ambient_noise_averagepersite <- woodpeckers_delaware %>% 
+  select(c(Detection_Date:Longitude)) %>% 
+  group_by(Latitude, Longitude) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+
 ```
 
 ```{r / Average Hemlock Per Site, include=FALSE}
 
-hemlock_average <- woodpeckers_delaware %>%
+hemlock_average_XY <- woodpeckers_delaware %>%
   select(Site_Name,Hemlock_Condition_Score,Latitude,Longitude)%>%
   group_by(Site_Name, Latitude, Longitude)%>%
   summarise(Average_Hemlock_Score = mean(Hemlock_Condition_Score))
 
+hemlock_score_average <- hemlock_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Hemlock = mean(Hemlock_Condition_Score))
+
 ```
 
 
-```{r / Road Noise Presence Per Site, include=FALSE}
+```{r / Road Noise Presence Per Site, Road Noise Proportion Per Year, include=FALSE}
 
-road_noise_false <- woodpeckers_delaware %>%
+road_noise_false_XY <- woodpeckers_delaware %>%
   filter(Road_Noise == "FALSE")%>%
   select(Site_Name,Road_Noise,Latitude,Longitude)%>%
   distinct(Site_Name, Latitude, Longitude)
 
-road_noise_true <- woodpeckers_delaware %>%
+road_noise_true_XY <- woodpeckers_delaware %>%
   filter(Road_Noise == "TRUE")%>%
   select(Site_Name,Road_Noise,Latitude,Longitude)%>%
   distinct(Site_Name, Latitude, Longitude)
 
+roadnoiseproportionperyear <- road_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  group_by(Year, Road_Noise, Common_Name) %>% 
+  summarise(Count = sum(Detection_Count))
+
 ```
 
 
-
-
 # 5) Exploratory Analysis
+
+The exploratory analysis of our data set is comprised of several plots and spatial map objects that relate our explanatory variables to woodpecker observations in the Delaware Water Gap National Park. First, the total observation count of all four species across all sites was plotted per year. This makes it possible to provide an understanding of the relative frequencies of woodpecker appearance in the park, as well as see how the population may have changed over time. Next, the explanatory variables were graphed over time. First, the ambient noise levels were plotted by date, to show the relative spread of the levels of noise present when a woodpecker is spotted. To provide further information, a line plot was produced to show the average ambient noise of all observations. Next, we decided to provide an analysis of road noise observations over time. The presence or absence of road noise was provided in the data, and we wished to explore the correlation between that and woodpecker appearance. As such, a plot was created comparing the presence or absence of road noise per year and by species. The final explanatory variable, hemlock condition, was graphed as an average value over time and by species. As a discrete value that is assigned per observation, we decided to see if there was differences each year in the average score, in order to see how it related to woodpecker appearance.
+
+After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mpaview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
 ```{r / Set Theme, include=FALSE}
 TheTheme <- theme_solarized(base_size = 12) +
@@ -268,16 +279,43 @@ AverageAmbientPlot + scale_color_brewer(palette="Dark2")
 ```
 
 
+```{r}
+RoadNoisePlot <- 
+  ggplot(roadnoiseproportionperyear,
+         aes(fill = Common_Name,
+             y = Count,
+             x = Year)) +
+  geom_bar(position = "stack", stat = "identity") + 
+  facet_wrap(~Road_Noise) +
+  scale_x_continuous(breaks=seq(2015,2025, by=2)) +
+  labs(x = "Year",
+       y = "Observation Count",
+       title = "Road Noise Presence per Observation (2014-2025)",
+       fill = "Species") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+RoadNoisePlot + scale_fill_brewer(palette="Dark2")
+```
+
+
+
 ```{r / Line Plot or Scatter Plot of Hemlock Condition Over Time, echo=FALSE, fig.align='center', fig.cap= "Line Plot or Scatter Plot of Hemlock Condition Over Time"}
 
 Hemlock_over_time <-
-  ggplot(hemlock_grouped,
+  ggplot(hemlock_score_average,
          aes(x=Year,
-             y=Hemlock_Condition_Score,
+             y=Average_Hemlock,
              color=Common_Name)) +
-  geom_point()
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, size = 0.5) +
+  scale_x_continuous(breaks = seq(2015,2025, by = 2)) +
+  scale_y_continuous(breaks = seq(0,5, by = 1)) +
+  labs(title = "Average Hemlock Score for All Sites (2014-2025)",
+       x = "Year",
+       y = "Average Hemlock Score",
+       color = "Species")
+  
+Hemlock_over_time + scale_color_brewer(palette="Dark2")
 
-Hemlock_over_time
 ```
 
 
@@ -303,23 +341,36 @@ MonitoringSites
 ```
 **Map 1:** Observation Sites Spatially
 
-```{r / Plot Species Observation Spatially}
+```{r / Average Noise Spatially}
 
-#MonitoringSitesFrequency <- ObservationSites, 
-        #cex = ,
-        #col.regions = "firebrick",
-        #layer.name = "Observation Sites",
-        #map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
-#MonitoringSites
+AverageNoisePerSiteSF <-ambient_noise_averagepersite %>% 
+   st_as_sf(coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+
+MonitoringSitesNoise <- mapview(AverageNoisePerSiteSF, 
+        zcol = 'Average_Noise',
+        alpha.regions = 0.4,
+        layer.name = "Ambient Noise Level",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+---
+  
+#hemlock_score_averagePerSite <- %>% 
+  st_as_sf(coords = c('Longitude', 'Latitude'),
+           crs=4326
+           )
+
+MonitoringSitesHemlock <- 
+ 
+AllVariablesMapview <- mapview(MonitoringSitesNoise) +
+  mapview()
 
 
 ```
 
 **Map 2:** Species Observation Spatially
 
-The exploratory analysis of our data set is comprised of several plots and spatial map objects that relate our explanatory variables to woodpecker observations in the Delaware Water Gap National Park. First, the total observation count of all four species across all sites was plotted per year. This makes it possible to provide an understanding of the relative frequencies of woodpecker appearance in the park, as well as see how the population may have changed over time. Next, the explanatory variables were graphed over time. First, the ambient noise levels were plotted by date, to show the relative spread of the levels of noise present when a woodpecker is spotted. To provide further information, a line plot was produced to show the average ambient noise of all observations. Next, we decided to provide an analysis of road noise observations over time. The presence or absence of road noise was provided in the data, and we wished to explore the correlation between that and woodpecker appearance. As such, a plot was created comparing the presence or absence of road noise per year and by species. The final explanatory variable, hemlock condition, was graphed as an average value over time and by species. As a discrete value that is assigned per observation, we decided to see if there was differences each year in the average score, in order to see how it related to woodpecker appearance.
 
-After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mpaview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
 # 6) Analysis
 
