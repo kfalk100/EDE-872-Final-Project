@@ -1,42 +1,90 @@
 ---
-title: "FinalProject_KLF_TLB_SCB"
+title: "Woodpecker Species Trends in Delaware Water Gap National Recreation Area"
+subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 author: "Kyle Falk, Trisha Belus, Sean Burke"
-date: "2025-11-20"
-output: pdf_document
+date: "2025-12-12"
+output: html_document
+toc_float: true
 editor_options: 
   chunk_output_type: console
---- 
+---
+
+```{=tex}
+\listoffigures
+\listoftables
+```
+# 1) Rationale and Research Questions
+
+The northeast region of the continental United States is an area of high population density, a pattern that persists among various states including Delaware.The Delaware Water Gap National Recreation Area is unique in that it is situated between two major interstates, the I-80 and the I-84. With a growing global population and sprawling urbanization, understanding the influence of development within close proximity to national protected areas is important for future urban planning. For this analysis, we chose to focus on point count data for four species of woodpeckers: downy woodpecker, pileated woodpecker, red-bellied woodpecker, and hairy woodpecker.Since woodpeckers reside in Delaware year-round, they are an appropriate species to chose when focusing on local environmental variables over time.
+
+Ambient noise levels, the presence of road noise, and the hemlock tree condition score data are used as possible explanatory variables for the detection count of the woodpecker species. Ambient noise levels and the presence of road noise are used as indicators of human influence. Hemlock tree condition scores are representative of the condition of hemlocks, as woodpeckers have been known to exploit hemlock tree snags for nesting.This study will investigate the statistical significance of these possible explanatory variables on woodpecker detection count as well as the spatial variation in these variables.
+
+# 2) Research Questions
+
+**Question 1:** Is there a visual correlation between the possible explanatory variables (ambient noise, road noise, and hemlock condition) and the detection of woodpecker species in the Delaware Water Gap from 2014-2025?
+
+**Question 2:** How does the appearance of woodpecker species, ambient noise, road noise, and hemlock condition vary spatially?
+
+**Question 3:** Is there a statistical significance between the possible explanatory variables (ambient noise, road noise, and hemlock condition) and the detection of woodpecker species in the Delaware Water Gap from 2014-2025?
+
+# 3) Dataset Information
+
+The dataset used in this analysis was downloaded from the [Data.gov](https://catalog.data.gov/dataset/streamside-bird-monitoring-data-in-eastern-rivers-and-mountains-network-parks-2011-2025-da) federal database and is originally published from the National Park Service (NPS). The data was gathered as a part of the Eastern Rivers and Mountains Network Streamside Bird Monitoring Protocol. The dataset includes avian point counts from the following six different National Parks:
+
+-   Allegheny Portage Railroad National Historic Site
+-   Bluestone National Scenic River
+-   Delaware Water Gap National Recreation Area
+-   Fort Necessity National Battlefield
+-   Friendship Hill National Historic Site
+-   New River Gorge National Park and Preserve
+
+The data was collected during the months of May and June from 2011-2025. Each park consisted of multiple sites with each site having three point count stations. The sites were sampled repeatedly, typically four times annually. Point counts were conducted for ten minutes each, providing ample data on the bird species detected.
+
+# 4) Data Wrangling
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r / Install Packages & Establish Working Directory}
-install.packages("lubridate")
-install.packages("tidyverse")
-install.packages("ggplot2")
-install.packages("mapview")
-install.packages("")
-install.packages("here")
+```{r / Install Packages & Establish Working Directory,warning=FALSE, echo=FALSE, include=FALSE}
+library(lubridate)
+library(ggplot2)
+library(mapview)
+library(tidyverse)
+library(here)
+library(ggthemes)
+library(RColorBrewer)
+library(sf)
+library(leaflet)
+
+getwd()
+here()
 
 ```
 
-```{r / Set Environment}
-h
+```{r / Import Dataset}
+pointcount <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_2315071_PointCount.csv"))
+
+```
+
+```{r / Change Date Objects and Create Year Column}
+
+pointcount$Start_Date_ISO <- ymd(pointcount$Start_Date_ISO)
+class(pointcount$Start_Date_ISO)
+
+pointcount<- pointcount %>%
+  mutate(Year = year(Start_Date_ISO))
+
+```
+
+```{r / }
+
 
 
 ```
 
-``` {r / }
+# 5) Exploratory Analysis
 
+# 6) Analysis
 
-
-```
-
-``` {r / }
-
-
-
-```
-
-
+# 7) Summary and Conclusions
