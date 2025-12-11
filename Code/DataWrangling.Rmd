@@ -16,7 +16,7 @@ getwd()
 ```
 
 
-```{r, import the two raw data csv}
+```{r, import the raw data csv}
 
 pointcount_detection <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_2315071_PointCount.csv"))
 
