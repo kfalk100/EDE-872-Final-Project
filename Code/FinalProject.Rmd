@@ -4,7 +4,6 @@ author: "Kyle Falk, Trisha Belus, Sean Burke"
 date: "2025-12-12"
 output:
   html_document: default
-  pdf_document: default
 subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 toc_float: true
 editor_options:
@@ -221,6 +220,7 @@ TheTheme <- theme_solarized(base_size = 12) +
 theme_set(TheTheme)
 
 ```
+
 
 ```{r Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Figure 1. Line Plot of Species Appearance Over Time", warning=FALSE}
 Species_over_time <- 
