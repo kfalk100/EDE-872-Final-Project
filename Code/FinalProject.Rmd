@@ -40,22 +40,18 @@ The dataset used in this analysis was downloaded from the [Data.gov](https://cat
 
 The data was collected during the months of May and June from 2011-2025. Each park consisted of multiple sites with each site having three point count stations. The sites were sampled repeatedly, typically four times annually. Point counts were conducted for ten minutes each, providing ample data on the bird species detected.
 
-| Information    | Description                                                                                                                      |
-|----------------------|--------------------------------------------------|
-| Data Publisher | Department of the Interior - National Park Service                                                                               |
-| Data Source    | <https://catalog.data.gov/dataset/streamside-bird-monitoring-data-in-eastern-rivers-and-mountains-network-parks-2011-2025-da>    |
-| Variables Used | National Park, Site Name, Observation Date, Ambient Noise, Road Noise, Common Name, Hemlock Condition Score, Latitude, Longitude |
-| Data Range     | May 27th, 2011 to May 19th, 2025                                                                                                 |
+| Information    | Description                                                                                                                          |
+|------------------------|-----------------------------------------------|
+| Data Publisher | Department of the Interior - National Park Service                                                                                   |
+| Data Source    | <https://catalog.data.gov/dataset/streamside-bird-monitoring-data-in-eastern-rivers-and-mountains-network-parks-2011-2025-da>        |
+| Variables Used | National Park, Site Name, Detection Date, Year, Ambient Noise, Road Noise, Common Name, Hemlock Condition Score, Latitude, Longitude |
+| Data Range     | May 27th, 2011 to May 19th, 2025                                                                                                     |
 
-: **Figure 1:** Dataset Information
+: **Table 1:** Dataset Information
 
 # 4) Data Wrangling
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r / Install Packages & Establish Working Directory,warning=FALSE, echo=FALSE, include=FALSE}
+```{r / Install Packages & Establish Working Directory, include=FALSE}
 library(lubridate)
 library(ggplot2)
 library(mapview)
@@ -71,12 +67,12 @@ here()
 
 ```
 
-```{r / Import Dataset}
+```{r / Import Dataset, include=FALSE}
 pointcount <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_2315071_PointCount.csv"))
 
 ```
 
-```{r / Change Date Objects and Create Year Column}
+```{r / Change Date Objects and Create Year Column, include=FALSE}
 
 pointcount$Start_Date_ISO <- ymd(pointcount$Start_Date_ISO)
 class(pointcount$Start_Date_ISO)
@@ -86,13 +82,240 @@ pointcount<- pointcount %>%
 
 ```
 
-```{r / }
+```{r / Wrangle Data for Main Dataset, include=FALSE}
 
+woodpeckers_delaware <- pointcount %>%
+  select(Unit_Code,
+         Site_Name,
+         Start_Date_ISO,
+         Year,
+         Ambient_Noise,
+         Road_Noise,
+         Common_Name,
+         Hemlock_Condition_Score,
+         Latitude,
+         Longitude)%>%
+  filter(!Common_Name %in% c("Unidentified Bird",
+                             "Unidentified Woodpecker",
+                             "Not Applicable")) %>%
+  filter(Common_Name %in% c("Downy Woodpecker",
+                            "Pileated Woodpecker",
+                            "Red-bellied Woodpecker",
+                            "Hairy Woodpecker")) %>%
+  filter(Unit_Code %in% c("DEWA"))%>%
+  rename(National_Park = Unit_Code) %>%
+  rename(Detection_Date = Start_Date_ISO)%>%
+  mutate(Hemlock_Condition_Score = ifelse(
+    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
+
+```
+
+
+```{r / Group by Location (site name), Time (year), Common Name and the Possible Explanatory Variables, include=FALSE}
+
+woodpeckers_grouped <-woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name) %>%
+  summarise(Detection_Count = n())
+
+ambient_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Ambient_Noise) %>%
+  summarise(Detection_Count = n())
+
+road_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Road_Noise) %>%
+  summarise(Detection_Count = n())
+
+hemlock_grouped <- woodpeckers_delaware %>%
+  group_by(Site_Name,Year, Common_Name, Hemlock_Condition_Score) %>%
+  summarise(Detection_Count = n())
+
+```
+
+
+```{r / Woodpecker Species Appearance Per Year and Per Site, include=FALSE}
+
+detections_per_year <- woodpeckers_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Total_Detections = sum(Detection_Count))
+
+detections_per_site <- woodpeckers_grouped %>% 
+  select(Site_Name,Common_Name, Detection_Count) %>% 
+  arrange(Site_Name, Common_Name) %>% 
+  group_by(Site_Name, Common_Name) %>% 
+  summarise(Total_Detections = sum(Detection_Count))
+
+total_site_detections <- woodpeckers_grouped %>% 
+  select(Site_Name, Detection_Count)%>% 
+  group_by(Site_Name) %>% 
+  summarise(Total_Detections = sum(Detection_Count))
+
+sites_observations_XY <- woodpeckers_delaware %>%
+  select(Site_Name,Latitude,Longitude)%>%
+  group_by(Site_Name,Latitude,Longitude)%>%
+  summarise(total_detections = n())
+
+```
+
+```{r / Average Ambient Noise Per Year, include=FALSE}
+
+ambient_noise_average <- ambient_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+
+```
+
+```{r / Average Hemlock Per Site, include=FALSE}
+
+hemlock_average <- woodpeckers_delaware %>%
+  select(Site_Name,Hemlock_Condition_Score,Latitude,Longitude)%>%
+  group_by(Site_Name, Latitude, Longitude)%>%
+  summarise(Average_Hemlock_Score = mean(Hemlock_Condition_Score))
+
+```
+
+
+```{r / Road Noise Presence Per Site, include=FALSE}
+
+road_noise_false <- woodpeckers_delaware %>%
+  filter(Road_Noise == "FALSE")%>%
+  select(Site_Name,Road_Noise,Latitude,Longitude)%>%
+  distinct(Site_Name, Latitude, Longitude)
+
+road_noise_true <- woodpeckers_delaware %>%
+  filter(Road_Noise == "TRUE")%>%
+  select(Site_Name,Road_Noise,Latitude,Longitude)%>%
+  distinct(Site_Name, Latitude, Longitude)
+
+```
+
+
+
+
+# 5) Exploratory Analysis
+
+```{r / Set Theme, include=FALSE}
+TheTheme <- theme_solarized(base_size = 12) +
+  theme(axis.text = element_text(color="black"),
+                              legend.position = "right",
+                              legend.text = element_text(size = 8, color = "black"),
+                              legend.title = element_text(size = 10, color = "black", face = "bold"),
+                              axis.title = element_text(size = 11, color = "black", face = "bold"),
+                              plot.title = element_text(size = 11, color = "black", face = "bold"),
+                              )
+theme_set(TheTheme)
+
+```
+
+```{r / Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Line Plot of Species Appearance Over Time"}
+Species_over_time <- 
+  ggplot(detections_per_year, 
+         aes(x=Year,
+             y=Total_Detections,
+             color=Common_Name)) +
+  geom_line() +
+  labs(
+    x="Year",
+    y="Number of Detections",
+    title="Woodpecker Species Appearance (2014-2025)",
+    color="Species"
+  ) +
+  scale_x_continuous(breaks=seq(2015,2025, by=2))
+Species_over_time + scale_color_brewer(palette="Dark2")
+```
+
+```{r / Scatter Plot of Ambient Noise Over Time, echo=FALSE, fig.align='center', fig.cap="Scatter Plot of Ambient Noise Over Time"}
+Noise_over_time <- 
+  ggplot(woodpeckers_delaware,
+         aes(x=Detection_Date,
+             y=Ambient_Noise,
+             color=Common_Name)) +
+  geom_point() +
+  labs(
+    x="Date",
+    y="Ambient Noise (dB)",
+    title="Ambient Noise Levels (2014-2025)",
+    color="Species") +
+  scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
+  scale_y_continuous(breaks = c(30, 35, 40, 45, 50, 55, 60, 65))
+
+Noise_over_time + scale_color_brewer(palette="Dark2")
 
 
 ```
 
-# 5) Exploratory Analysis
+```{r / Line Plot of Average Ambient Noise, echo=FALSE, fig.align='center', fig.cap= "Line Plot of Average Ambient Noise" }
+AverageAmbientPlot <-
+  ggplot(ambient_noise_average,
+         aes(x=Year,
+             y=Average_Noise,
+             color=Common_Name)) +
+  geom_line() +
+  labs(
+    x="Year",
+    y="Average Ambient Noise (dB)",
+    title="Average Ambient Noise Levels (2014-2025)",
+    color="Species") +
+  scale_y_continuous(breaks = c(38, 40, 42, 44, 46, 48, 50, 52)) +
+  scale_x_continuous(breaks=seq(2015,2025, by=2))
+
+AverageAmbientPlot + scale_color_brewer(palette="Dark2")
+  
+
+```
+
+
+```{r / Line Plot or Scatter Plot of Hemlock Condition Over Time, echo=FALSE, fig.align='center', fig.cap= "Line Plot or Scatter Plot of Hemlock Condition Over Time"}
+
+Hemlock_over_time <-
+  ggplot(hemlock_grouped,
+         aes(x=Year,
+             y=Hemlock_Condition_Score,
+             color=Common_Name)) +
+  geom_point()
+
+Hemlock_over_time
+```
+
+
+```{r / Comparison of Hemlock Condition and Detection Count}
+
+
+```
+
+```{r / Graph Monitoring Sites, echo=FALSE}
+ObservationSites <- woodpeckers_delaware %>% 
+  st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+
+MonitoringSites <- mapview(ObservationSites, 
+        cex = 4,
+        col.regions = "firebrick",
+        layer.name = "Observation Sites",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+MonitoringSites
+
+
+```
+**Map 1:** Observation Sites Spatially
+
+```{r / Plot Species Observation Spatially}
+
+#MonitoringSitesFrequency <- ObservationSites, 
+        #cex = ,
+        #col.regions = "firebrick",
+        #layer.name = "Observation Sites",
+        #map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+#MonitoringSites
+
+
+```
+
+**Map 2:** Species Observation Spatially
 
 # 6) Analysis
 
