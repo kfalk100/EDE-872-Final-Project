@@ -1,11 +1,13 @@
 ---
 title: "Woodpecker Species Trends in Delaware Water Gap National Recreation Area"
-subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 author: "Kyle Falk, Trisha Belus, Sean Burke"
 date: "2025-12-12"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
+subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 toc_float: true
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -206,7 +208,6 @@ roadnoiseproportionperyear <- road_grouped %>%
 
 The exploratory analysis of our data set is comprised of several plots and spatial map objects that relate our explanatory variables to woodpecker observations in the Delaware Water Gap National Park. First, the total observation count of all four species across all sites was plotted per year. This makes it possible to provide an understanding of the relative frequencies of woodpecker appearance in the park, as well as see how the population may have changed over time. Next, the explanatory variables were graphed over time. First, the ambient noise levels were plotted by date, to show the relative spread of the levels of noise present when a woodpecker is spotted. To provide further information, a line plot was produced to show the average ambient noise of all observations. Next, we decided to provide an analysis of road noise observations over time. The presence or absence of road noise was provided in the data, and we wished to explore the correlation between that and woodpecker appearance. As such, a plot was created comparing the presence or absence of road noise per year and by species. The final explanatory variable, hemlock condition, was graphed as an average value over time and by species. As a discrete value that is assigned per observation, we decided to see if there was differences each year in the average score, in order to see how it related to woodpecker appearance.
 
-After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mpaview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
 ```{r Set Theme, include=FALSE}
 TheTheme <- theme_solarized(base_size = 12) +
@@ -221,7 +222,7 @@ theme_set(TheTheme)
 
 ```
 
-```{r Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Line Plot of Species Appearance Over Time"}
+```{r Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Figure 1. Line Plot of Species Appearance Over Time", warning=FALSE}
 Species_over_time <- 
   ggplot(detections_per_year, 
          aes(x=Year,
@@ -238,7 +239,8 @@ Species_over_time <-
 Species_over_time + scale_color_brewer(palette="Dark2")
 ```
 
-```{r Scatter Plot of Ambient Noise Over Time, echo=FALSE, fig.align='center', fig.cap="Scatter Plot of Ambient Noise Over Time"}
+
+```{r Scatter Plot of Ambient Noise Over Time, echo=FALSE, fig.align='center', warning=FALSE, fig.cap="Figure 2. Scatter Plot of Ambient Noise Over Time"}
 Noise_over_time <- 
   ggplot(woodpeckers_delaware,
          aes(x=Detection_Date,
@@ -258,7 +260,8 @@ Noise_over_time + scale_color_brewer(palette="Dark2")
 
 ```
 
-```{r Line Plot of Average Ambient Noise, echo=FALSE, fig.align='center', fig.cap= "Line Plot of Average Ambient Noise" }
+
+```{r Line Plot of Average Ambient Noise, echo=FALSE, fig.align='center', warning=FALSE, fig.cap="Figure 3. Line Plot of Average Ambient Noise" }
 AverageAmbientPlot <-
   ggplot(ambient_noise_average,
          aes(x=Year,
@@ -279,7 +282,7 @@ AverageAmbientPlot + scale_color_brewer(palette="Dark2")
 ```
 
 
-```{r Road Noise True or False, echo=FALSE, fig.align='center', fig.cap= "Road Noise Presence or Absence Across All Sites}
+```{r Road Noise True or False, echo=FALSE, fig.align='center', fig.cap="Figure 4. Road Noise Presence or Absence Across All Sites"}
 RoadNoisePlot <- 
   ggplot(roadnoiseproportionperyear,
          aes(fill = Common_Name,
@@ -297,16 +300,14 @@ RoadNoisePlot + scale_fill_brewer(palette="Dark2")
 ```
 
 
-
-```{r Line Plot or Scatter Plot of Hemlock Condition Over Time, echo=FALSE, fig.align='center', fig.cap= "Line Plot or Scatter Plot of Hemlock Condition Over Time"}
-
+```{r Scatter Plot of Hemlock Condition Over Time, echo=FALSE, warning=FALSE, fig.align='center', fig.cap="Figure 5. Scatter Plot of Hemlock Condition Over Time"}
 Hemlock_over_time <-
   ggplot(hemlock_score_average,
-         aes(x=Year,
-             y=Average_Hemlock,
-             color=Common_Name)) +
+         aes(x = Year,
+             y = Average_Hemlock,
+             color = Common_Name)) +
   geom_point() +
-  geom_smooth(method = lm, se = FALSE, size = 0.5) +
+  geom_smooth(method = lm, se = FALSE, linewidth = 0.5) +
   scale_x_continuous(breaks = seq(2015,2025, by = 2)) +
   scale_y_continuous(breaks = seq(0,5, by = 1)) +
   labs(title = "Average Hemlock Score for All Sites (2014-2025)",
@@ -319,13 +320,27 @@ Hemlock_over_time + scale_color_brewer(palette="Dark2")
 ```
 
 
-```{r / Comparison of Hemlock Condition and Detection Count}
+```{r / Comparison of Hemlock Condition and Detection Count, echo=FALSE, warning=FALSE, fig.align='center', fig.cap="Figure 6. Comparison of Hemlock Condition and Detection Count"}
+HemlockVSDetection <-
+  ggplot(hemlock_grouped,
+         aes(x=Hemlock_Condition_Score,
+             y = Detection_Count,
+             fill = Common_Name)) +
+  geom_bar(position = "stack", stat = "identity") +
+  scale_x_continuous(breaks = seq(0,5, by = 1)) +
+  scale_y_continuous(breaks = seq(0,300,by = 50)) +
+  labs(title = "Detection Count at Different Hemlock Condition Scores",
+       x = "Hemlock Condition Score",
+       y = "Detection Count",
+       fill = "Species")
 
+HemlockVSDetection + scale_fill_brewer(palette="Dark2")
 
 ```
 
+After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mapview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
-```{r / Graph Monitoring Sites, echo=FALSE}
+```{r / Graph Monitoring Sites, echo=FALSE, warning=FALSE}
 # Monitoring Sites
 mapviewOptions(legend = TRUE, 
                legend.opacity = 0.8,)
