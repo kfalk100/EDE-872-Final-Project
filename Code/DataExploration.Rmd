@@ -199,19 +199,24 @@ Ambient_Noise_AveragePerSite <- Woodpeckers_Date %>%
 summary(Ambient_Noise_Average$Average_Noise)
 
 AverageNoisePerSiteSF <-Ambient_Noise_AveragePerSite %>% 
-   st_as_sf( coords = c('Longitude','Latitude'), 
+   st_as_sf(coords = c('Longitude','Latitude'), 
     crs=4326
     )
-
----
-  
-Hemlock_
 
 MonitoringSitesNoise <- mapview(AverageNoisePerSiteSF, 
         zcol = 'Average_Noise',
         alpha.regions = 0.4,
         layer.name = "Ambient Noise Level",
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
+---
+  
+Hemlock_Score_AveragePerSite <- %>% 
+  st_as_sf(coords = c('Longitude', 'Latitude'),
+           crs=4326
+           )
+
+MonitoringSitesHemlock <- 
+ 
 AllVariablesMapview <- mapview(MonitoringSitesNoise) +
   mapview()
 
