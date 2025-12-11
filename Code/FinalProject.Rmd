@@ -105,7 +105,7 @@ woodpeckers_delaware <- pointcount %>%
                             "Hairy Woodpecker")) %>%
   filter(Unit_Code %in% c("DEWA"))%>%
   rename(National_Park = Unit_Code) %>%
-  rename(Detection_Date = Start_Date_ISO
+  rename(Detection_Date = Start_Date_ISO)
          
 ```
 
