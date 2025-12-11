@@ -75,16 +75,6 @@ woodpeckers_delaware <-woodpeckers_delaware %>%
 ```
 
 
-```{r, change hemlock of 0 to 5 for continous scale of better 1 to worse 5}
-
-woodpeckers_delaware <- woodpeckers_delaware %>%
-  mutate(Hemlock_Condition_Score = ifelse(
-    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
-
-
-```
-
-
 ```{r, group by site name, year, and common name}
 woodpeckers_grouped <-woodpeckers_delaware %>%
   group_by(Site_Name,Year, Common_Name) %>%
@@ -129,6 +119,7 @@ write.csv(hemlock_grouped, row.names = FALSE,
 
 ```
 
+
 ```{r}
 dateincluded_trim <- select(pointcount_detection,
                           Unit_Code,
@@ -153,13 +144,15 @@ dateincluded_woodpeckers <- dateincluded_trim %>%
                             "Hairy Woodpecker")) %>%
   filter(Unit_Code %in% c("DEWA"))%>%
   rename(National_Park = Unit_Code) %>%
-  rename(Detection_Date = Start_Date_ISO)%>%
-  mutate(Hemlock_Condition_Score = ifelse(
-    Hemlock_Condition_Score == 0, 5, Hemlock_Condition_Score))
-
-
+  rename(Detection_Date = Start_Date_ISO)
 
 ```
+
+```{r}
+write.csv(dateincluded_trim, row.names = FALSE, 
+          file = here("Data","Processed","Dateincluded_Woodpeckers.csv"))
+```
+
 
 
 ```
