@@ -62,6 +62,7 @@ library(ggthemes)
 library(RColorBrewer)
 library(sf)
 library(leaflet)
+library(agricolae)
 
 getwd()
 here()
@@ -373,5 +374,77 @@ AllVariablesMapview <- mapview(MonitoringSitesNoise) +
 
 
 # 6) Analysis
+
+Now that we have data that has been properly wrangled to fit our study's needs, we can run some statistical analysis on each of the variables we are examining to see if they have any affect on woodpecker sightings. The variables we will be testing are hemlock conditions, ambient noise levels, and road noise levels and each need to be analyzed in different ways due to their nature. To measure if hemlock conditions influence woodpecker sightings, we ran a one-way ANOVA test on it because the hemlock data is explanatory and categorical with more than two conditions. We also ran a post-hoc test using Tukey Honest Significant Difference test to see if any hemlock condition guarantees a certain level of woodpecker sighting. To analyze the impact of ambient noise, we used a singular linear regression because ambient noise is a single continuous explanatory variable. The way we analyzed how road noise impacted woodpecker sightings was by running a t-test because it is the only explanatory variable with only two categories. Once we run these tests we will be able to determine if these variables have any impact of woodpecker sightings.
+
+```{r, message = FALSE}
+library(tidyverse)
+library(agricolae)
+library(here)
+
+setwd("/home/guest/EDE_Fall2025/Lessons/872 Final Project")
+
+```
+
+```{r, read our data sets}
+Ambient_Noise <- read.csv(here("Data/Processed/Ambient_Grouped.csv"))
+
+Road_Noise <- read.csv(here("Data/Processed/Road_Grouped.csv"))
+
+Hemlock <- read.csv(here("Data/Processed/Hemlock_Grouped.csv"))
+
+```
+
+```{r, One-way ANOVA test on hemlock tree abundance}
+Hemlock_ANOVAFactor <- Hemlock
+
+Hemlock_ANOVAFactor$Hemlock_Condition_Score <- as.factor(Hemlock_ANOVAFactor$Hemlock_Condition_Score)
+
+Hemlock_ANOVA <- aov(data = Hemlock_ANOVAFactor, Detection_Count ~ Hemlock_Condition_Score)
+
+summary(Hemlock_ANOVA)
+
+plot(Hemlock_ANOVA)
+
+TukeyHSD(Hemlock_ANOVA)
+
+```
+
+Our ANOVA test reveals that there is a correlation between hemlock condition and woodpecker sighting. This is because the p-value is 0.0236 which is below the 0.05 threshold. However, when we run a HSD test on the data, there is no significant combination of hemlock condition and woodpeckers spotted that is significant, all of their p-values were above 0.05. What this means is that there is hemlock conditions that guarantees a certain number of wood pecker sightings.
+
+```{r, singular linear regression for ambient noise}
+Ambient_Regression <- lm(data = Ambient_Noise, Detection_Count ~ Ambient_Noise)
+
+summary(Ambient_Regression)
+
+cor.test(Ambient_Noise$Detection_Count, Ambient_Noise$Ambient_Noise)
+
+ggplot(Ambient_Noise, aes(x = Detection_Count, y = Ambient_Noise)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Correlation Between Woodpecker Sighting and Ambient Noise",
+       x = "Woodpecker Sightings",
+       y = "Ambient Noise")
+
+```
+
+Based on the results of the regression, we can draw a feel conclusions about how woodpecker sightings and ambient noise levels are correlated. Firstly, we can see that our p value is 0.04804 which is below 0.05, meaning that we reject the null hypothesis and accept the alternative. The alternative hypothesis states that the true correlation between our variables is not equal to 0 which is true, the estimated correlation is -0.08991391. This correlation means that woodpecker sitings and ambient noise level are inversely related. As ambient noise levels rise, the amount of woodpecker sightings decreases, but only slightly, our correlation is not that much lower than 0 so it is not a dramatic drop off as ambient noise increases.
+
+```{r, t-test for road noise}
+Road_2ttest <- t.test(Road_Noise$Detection_Count ~ Road_Noise$Road_Noise)
+
+Road_2ttest
+
+ggplot(Road_Noise, aes(x = Detection_Count, color = as.factor(Road_Noise))) +
+  geom_freqpoly() +
+  labs(title = "Woodpecker Sightings Based on Road Noise",
+       color = "Road Noise Present?",
+       x = "Woodpecker Sightings",
+       y = "Number of Sites")
+
+```
+
+When analyzing the results of our t-test, we can see a clear conclusion about if road noise and woodpecker sightings are related. The p-value of our t-test was 0.9768 which is well above the threshold of 0.05. This means that we cannot reject our null hypothesis which states that there is no difference in the mean between the road noise and no road noise groups. The mean of the group with road noise was 1.793478 and the mean of the group without road noise was 1.798206. The difference is incredibly small so it make sense that the t test confirmed there is no relationship. So woodpecker sightings and road noise are not correlated and you are just as likely to find woodpeckers in areas with road noise than in places without road noise.
+
 
 # 7) Summary and Conclusions
