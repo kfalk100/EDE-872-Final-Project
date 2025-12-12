@@ -1,11 +1,12 @@
 ---
 title: "Woodpecker Species Trends in Delaware Water Gap National Recreation Area"
-subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 author: "Kyle Falk, Trisha Belus, Sean Burke"
 date: "2025-12-12"
-output: html_document
+output:
+  html_document: default
+subtitle: "[Project GitHub](https://github.com/kfalk100/EDE-872-Final-Project.git)"
 toc_float: true
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -69,12 +70,12 @@ here()
 
 ```
 
-```{r / Import Dataset, include=FALSE}
+```{r Import Dataset, include=FALSE}
 pointcount <- read.csv(file = here("Data","Raw","ERMN_StreamsideBirds_2315071_PointCount.csv"))
 
 ```
 
-```{r / Change Date Objects and Create Year Column, include=FALSE}
+```{r Change Date Objects and Create Year Column, include=FALSE}
 
 pointcount$Start_Date_ISO <- ymd(pointcount$Start_Date_ISO)
 class(pointcount$Start_Date_ISO)
@@ -84,7 +85,7 @@ pointcount<- pointcount %>%
 
 ```
 
-```{r / Wrangle Data for Main Dataset, include=FALSE}
+```{r Wrangle Data for Main Dataset, include=FALSE}
 
 woodpeckers_delaware <- pointcount %>%
   select(Unit_Code,
@@ -111,7 +112,7 @@ woodpeckers_delaware <- pointcount %>%
 ```
 
 
-```{r / Group by Location (site name), Time (year), Common Name and the Possible Explanatory Variables, include=FALSE}
+```{r Group by Location (site name), Time (year), Common Name and the Possible Explanatory Variables, include=FALSE}
 
 woodpeckers_grouped <-woodpeckers_delaware %>%
   group_by(Site_Name,Year, Common_Name) %>%
@@ -132,7 +133,7 @@ hemlock_grouped <- woodpeckers_delaware %>%
 ```
 
 
-```{r / Woodpecker Species Appearance Per Year and Per Site, include=FALSE}
+```{r Woodpecker Species Appearance Per Year and Per Site, include=FALSE}
  ##woodpeckers_groupedtrim
 detections_per_year <- woodpeckers_grouped %>% 
   select(c(Year:Detection_Count)) %>% 
@@ -152,7 +153,7 @@ sites_observations_XY_species <- woodpeckers_delaware %>%
 
 ```
 
-```{r / Average Ambient Noise Per Year, include=FALSE}
+```{r Average Ambient Noise Per Year, include=FALSE}
 
 ambient_noise_average <- ambient_grouped %>% 
   select(c(Year:Detection_Count)) %>% 
@@ -167,7 +168,7 @@ ambient_noise_averagepersite <- woodpeckers_delaware %>%
 
 ```
 
-```{r / Average Hemlock Per Site, include=FALSE}
+```{r Average Hemlock Per Site, include=FALSE}
 
 hemlock_average_XY <- woodpeckers_delaware %>%
   select(Site_Name,Hemlock_Condition_Score,Latitude,Longitude)%>%
@@ -183,7 +184,7 @@ hemlock_score_average <- hemlock_grouped %>%
 ```
 
 
-```{r / Road Noise Presence Per Site, Road Noise Proportion Per Year, include=FALSE}
+```{r Road Noise Presence Per Site, Road Noise Proportion Per Year, include=FALSE}
 
 road_noise_false_XY <- woodpeckers_delaware %>%
   filter(Road_Noise == "FALSE")%>%
@@ -207,9 +208,8 @@ roadnoiseproportionperyear <- road_grouped %>%
 
 The exploratory analysis of our data set is comprised of several plots and spatial map objects that relate our explanatory variables to woodpecker observations in the Delaware Water Gap National Park. First, the total observation count of all four species across all sites was plotted per year. This makes it possible to provide an understanding of the relative frequencies of woodpecker appearance in the park, as well as see how the population may have changed over time. Next, the explanatory variables were graphed over time. First, the ambient noise levels were plotted by date, to show the relative spread of the levels of noise present when a woodpecker is spotted. To provide further information, a line plot was produced to show the average ambient noise of all observations. Next, we decided to provide an analysis of road noise observations over time. The presence or absence of road noise was provided in the data, and we wished to explore the correlation between that and woodpecker appearance. As such, a plot was created comparing the presence or absence of road noise per year and by species. The final explanatory variable, hemlock condition, was graphed as an average value over time and by species. As a discrete value that is assigned per observation, we decided to see if there was differences each year in the average score, in order to see how it related to woodpecker appearance.
 
-After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mpaview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
-```{r / Set Theme, include=FALSE}
+```{r Set Theme, include=FALSE}
 TheTheme <- theme_solarized(base_size = 12) +
   theme(axis.text = element_text(color="black"),
                               legend.position = "right",
@@ -222,7 +222,8 @@ theme_set(TheTheme)
 
 ```
 
-```{r / Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Line Plot of Species Appearance Over Time"}
+
+```{r Line Plot of Species Appearance Over Time, echo=FALSE, fig.align='center', fig.cap="Figure 1. Line Plot of Species Appearance Over Time", warning=FALSE}
 Species_over_time <- 
   ggplot(detections_per_year, 
          aes(x=Year,
@@ -239,7 +240,8 @@ Species_over_time <-
 Species_over_time + scale_color_brewer(palette="Dark2")
 ```
 
-```{r / Scatter Plot of Ambient Noise Over Time, echo=FALSE, fig.align='center', fig.cap="Scatter Plot of Ambient Noise Over Time"}
+
+```{r Scatter Plot of Ambient Noise Over Time, echo=FALSE, fig.align='center', warning=FALSE, fig.cap="Figure 2. Scatter Plot of Ambient Noise Over Time"}
 Noise_over_time <- 
   ggplot(woodpeckers_delaware,
          aes(x=Detection_Date,
@@ -259,7 +261,8 @@ Noise_over_time + scale_color_brewer(palette="Dark2")
 
 ```
 
-```{r / Line Plot of Average Ambient Noise, echo=FALSE, fig.align='center', fig.cap= "Line Plot of Average Ambient Noise" }
+
+```{r Line Plot of Average Ambient Noise, echo=FALSE, fig.align='center', warning=FALSE, fig.cap="Figure 3. Line Plot of Average Ambient Noise" }
 AverageAmbientPlot <-
   ggplot(ambient_noise_average,
          aes(x=Year,
@@ -280,7 +283,7 @@ AverageAmbientPlot + scale_color_brewer(palette="Dark2")
 ```
 
 
-```{r}
+```{r Road Noise True or False, echo=FALSE, fig.align='center', fig.cap="Figure 4. Road Noise Presence or Absence Across All Sites"}
 RoadNoisePlot <- 
   ggplot(roadnoiseproportionperyear,
          aes(fill = Common_Name,
@@ -298,16 +301,14 @@ RoadNoisePlot + scale_fill_brewer(palette="Dark2")
 ```
 
 
-
-```{r / Line Plot or Scatter Plot of Hemlock Condition Over Time, echo=FALSE, fig.align='center', fig.cap= "Line Plot or Scatter Plot of Hemlock Condition Over Time"}
-
+```{r Scatter Plot of Hemlock Condition Over Time, echo=FALSE, warning=FALSE, fig.align='center', fig.cap="Figure 5. Scatter Plot of Hemlock Condition Over Time"}
 Hemlock_over_time <-
   ggplot(hemlock_score_average,
-         aes(x=Year,
-             y=Average_Hemlock,
-             color=Common_Name)) +
+         aes(x = Year,
+             y = Average_Hemlock,
+             color = Common_Name)) +
   geom_point() +
-  geom_smooth(method = lm, se = FALSE, size = 0.5) +
+  geom_smooth(method = lm, se = FALSE, linewidth = 0.5) +
   scale_x_continuous(breaks = seq(2015,2025, by = 2)) +
   scale_y_continuous(breaks = seq(0,5, by = 1)) +
   labs(title = "Average Hemlock Score for All Sites (2014-2025)",
@@ -320,52 +321,185 @@ Hemlock_over_time + scale_color_brewer(palette="Dark2")
 ```
 
 
-```{r / Comparison of Hemlock Condition and Detection Count}
+```{r / Comparison of Hemlock Condition and Detection Count, echo=FALSE, warning=FALSE, fig.align='center', fig.cap="Figure 6. Comparison of Hemlock Condition and Detection Count"}
+HemlockVSDetection <-
+  ggplot(hemlock_grouped,
+         aes(x=Hemlock_Condition_Score,
+             y = Detection_Count,
+             fill = Common_Name)) +
+  geom_bar(position = "stack", stat = "identity") +
+  scale_x_continuous(breaks = seq(0,5, by = 1)) +
+  scale_y_continuous(breaks = seq(0,300,by = 50)) +
+  labs(title = "Detection Count at Different Hemlock Condition Scores",
+       x = "Hemlock Condition Score",
+       y = "Detection Count",
+       fill = "Species")
 
+HemlockVSDetection + scale_fill_brewer(palette="Dark2")
 
 ```
 
-```{r / Graph Monitoring Sites, echo=FALSE}
-ObservationSites <- woodpeckers_delaware %>% 
-  st_as_sf( coords = c('Longitude','Latitude'), 
+After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mapview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
+
+```{r / Graph Monitoring Sites, echo=FALSE, warning=FALSE}
+# Monitoring Sites
+mapviewOptions(legend = TRUE, 
+               legend.opacity = 0.8,)
+
+
+ObservationSitesSF <- woodpeckers_delaware %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
     crs=4326
     )
-
-MonitoringSites <- mapview(ObservationSites, 
+MonitoringSites <- mapview(ObservationSitesSF, 
         cex = 4,
         col.regions = "firebrick",
         layer.name = "Observation Sites",
+        legend.opacity = 0.8,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
-MonitoringSites
 
 
-```
-**Map 1:** Observation Sites Spatially
-
-```{r / Average Noise Spatially}
-
-AverageNoisePerSiteSF <-ambient_noise_averagepersite %>% 
-   st_as_sf(coords = c('Longitude','Latitude'), 
+ObservationFrequencySF <- sites_observations_XY %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
     crs=4326
     )
-
-MonitoringSitesNoise <- mapview(AverageNoisePerSiteSF, 
-        zcol = 'Average_Noise',
+MonitoringSitesFrequency <- mapview(ObservationFrequencySF,
+        cex = "total_detections",
+        col.regions = "forestgreen",
+        layer.name = "Observation Sites by Number of Total Observations",
+        legend.opacity = 0.8,
         alpha.regions = 0.4,
-        layer.name = "Ambient Noise Level",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+
+# Species SF and Mapview
+sites_xy_pileated <- sites_observations_XY_species %>% 
+  filter(Common_Name == "Pileated Woodpecker") %>% 
+  select(-Site_Name)
+ObservationPileatedSF <- sites_xy_pileated %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesPileated <- mapview(ObservationPileatedSF,
+        cex = "total_detections",
+        col.regions = "slateblue3",
+        layer.name = "Observation Sites of Pileated Woodpeckers by Number of Total Observations",
+        legend.opacity = 0.8,
+        alpha.regions = 0.6,
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+      
+
+sites_xy_redbellied <- sites_observations_XY_species %>% 
+  filter(Common_Name == "Red-bellied Woodpecker")%>% 
+  select(-Site_Name)
+ObservationRedBelliedSF <- sites_xy_redbellied %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesRedBellied <- mapview(ObservationRedBelliedSF,
+        cex = "total_detections",
+        col.regions = "maroon2",
+        layer.name = "Observation Sites of Red-bellied Woodpeckers by Number of Total Observations",
+        legend.opacity = 0.8,
+        alpha.regions = 0.6,
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+
+
+sites_xy_hairy <- sites_observations_XY_species %>% 
+  filter(Common_Name == "Hairy Woodpecker")%>% 
+  select(-Site_Name)
+ObservationHairySF <- sites_xy_hairy %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesHairy <- mapview(ObservationHairySF,
+        cex = "total_detections",
+        col.regions = "darkorange3",
+        layer.name = "Observation Sites of Hairy Woodpeckers by Number of Total Observations",
+        legend.opacity = 0.8,
+        alpha.regions = 0.6,
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+
+
+sites_xy_downy <- sites_observations_XY_species %>% 
+  filter(Common_Name == "Downy Woodpecker")%>% 
+  select(-Site_Name)
+ObservationDownySF <- sites_xy_downy %>% 
+    st_as_sf( coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesDowny <- mapview(ObservationDownySF,
+        cex = "total_detections",
+        col.regions = "seagreen",
+        layer.name = "Observation Sites of Downy Woodpeckers by Number of Total Observations",
+        legend.opacity = 0.8,
+        alpha.regions = 0.6,
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+
+
+MonitoringSiteMap <- MonitoringSites + MonitoringSitesFrequency
+
+BirdSpeciesMap <- MonitoringSitesPileated + MonitoringSitesRedBellied + MonitoringSitesHairy + MonitoringSitesDowny
+
+MonitoringSiteMap
+
+BirdSpeciesMap
+
+```
+
+**Map 1:** Observation Sites Spatially
+
+```{r Explanatory Variables Spatially}
+
+AverageNoiseSF <-ambient_noise_averagepersite %>% 
+    st_as_sf(coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesNoise <- mapview(AverageNoiseSF, 
+        zcol = 'Average_Noise',
+        cex = 4,
+        alpha.regions = 0.6,
+        legend.opacity = 0.8,
+        layer.name = "Average Ambient Noise Level",
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery")) 
----
-  
-#hemlock_score_averagePerSite <- %>% 
-  st_as_sf(coords = c('Longitude', 'Latitude'),
-           crs=4326
-           )
 
-MonitoringSitesHemlock <- 
+
+Hemlock_Score_AverageSF <- hemlock_average_XY %>% 
+    st_as_sf(coords = c('Longitude', 'Latitude'),
+    crs=4326
+    )
+MonitoringSitesHemlock <- mapview(Hemlock_Score_AverageSF,
+        zcol = 'Average_Hemlock_Score',
+        cex = 4,
+        alpha.regions = 0.6,
+        legend.opacity = 0.8,
+        layer.name = "Average Hemlock Score",
+        map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+
+road_noise_false_XY1 <- road_noise_false_XY %>% select(-Site_Name)
+Road_Noise_FalseSF <- road_noise_false_XY1 %>%
+    st_as_sf(coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesFalse <- mapview(Road_Noise_FalseSF,
+          cex = 4,
+          col.regions = "green",
+          layer.name = "Woodpecker Sightings without Road Noise",
+          map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
+          
+
+road_noise_true_XY1 <- road_noise_true_XY %>% select(-Site_Name)
+Road_Noise_TrueSF <- road_noise_true_XY1 %>% 
+    st_as_sf(coords = c('Longitude','Latitude'), 
+    crs=4326
+    )
+MonitoringSitesTrue <- mapview(Road_Noise_TrueSF,
+          cex = 4,
+          col.regions = "red",
+          layer.name = "Woodpecker Sightings with Road Noise",
+          map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
  
-AllVariablesMapview <- mapview(MonitoringSitesNoise) +
-  mapview()
-
+ExplanatoryVariableMap <- MonitoringSitesNoise + MonitoringSitesHemlock + MonitoringSitesTrue + MonitoringSitesFalse
+ExplanatoryVariableMap
 
 ```
 
