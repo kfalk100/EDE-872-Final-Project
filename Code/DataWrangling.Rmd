@@ -149,10 +149,79 @@ dateincluded_woodpeckers <- dateincluded_trim %>%
 ```
 
 ```{r}
-write.csv(dateincluded_trim, row.names = FALSE, 
+write.csv(dateincluded_woodpeckers, row.names = FALSE, 
           file = here("Data","Processed","Dateincluded_Woodpeckers.csv"))
 ```
 
+
+```{r Woodpecker Species Appearance Per Year and Per Site}
+ 
+detections_per_year <- woodpeckers_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Total_Detections = sum(Detection_Count))
+
+sites_observations_XY <- woodpeckers_delaware %>%
+  select(Site_Name,Latitude,Longitude)%>%
+  group_by(Site_Name,Latitude,Longitude)%>%
+  summarise(total_detections = n())
+
+sites_observations_XY_species <- woodpeckers_delaware %>%
+  select(Site_Name,Latitude,Longitude,Common_Name)%>%
+  group_by(Site_Name,Latitude,Longitude,Common_Name)%>%
+  summarise(total_detections = n())
+
+```
+
+```{r Average Ambient Noise Per Year}
+
+ambient_noise_average <- ambient_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+
+ambient_noise_averagepersite <- woodpeckers_delaware %>% 
+  select(c(Detection_Date:Longitude)) %>% 
+  group_by(Latitude, Longitude) %>% 
+  summarise(Average_Noise = mean(Ambient_Noise))
+
+```
+
+```{r Average Hemlock Per Site}
+
+hemlock_average_XY <- woodpeckers_delaware %>%
+  select(Site_Name,Hemlock_Condition_Score,Latitude,Longitude)%>%
+  group_by(Site_Name, Latitude, Longitude)%>%
+  summarise(Average_Hemlock_Score = mean(Hemlock_Condition_Score))
+
+hemlock_score_average <- hemlock_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  arrange(Year, Common_Name) %>% 
+  group_by(Year, Common_Name) %>% 
+  summarise(Average_Hemlock = mean(Hemlock_Condition_Score))
+
+```
+
+```{r Road Noise Presence Per Site, Road Noise Proportion Per Year}
+
+road_noise_false_XY <- woodpeckers_delaware %>%
+  filter(Road_Noise == "FALSE")%>%
+  select(Site_Name,Road_Noise,Latitude,Longitude)%>%
+  distinct(Site_Name, Latitude, Longitude)
+
+road_noise_true_XY <- woodpeckers_delaware %>%
+  filter(Road_Noise == "TRUE")%>%
+  select(Site_Name,Road_Noise,Latitude,Longitude)%>%
+  distinct(Site_Name, Latitude, Longitude)
+
+roadnoiseproportionperyear <- road_grouped %>% 
+  select(c(Year:Detection_Count)) %>% 
+  group_by(Year, Road_Noise, Common_Name) %>% 
+  summarise(Count = sum(Detection_Count))
+
+```
 
 
 ```
