@@ -19,6 +19,24 @@ editor_options:
 
 Ambient noise levels, the presence of road noise, and the hemlock tree condition score data are used as possible explanatory variables for the detection count of the woodpecker species. Ambient noise levels and the presence of road noise are used as indicators of human influence. Hemlock tree condition scores are representative of the condition of hemlocks, as woodpeckers have been known to exploit hemlock tree snags for nesting.This study will investigate the statistical significance of these possible explanatory variables on woodpecker detection count as well as the spatial variation in these variables.
 
+<br>
+
+![**Image 1.** Pileated Woodpecker](https://media.audubon.org/nas_birdapi/aud_gbbc-2016_pileated-woodpecker_34025_kk_wa_photo-bruce-harris_adult-male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale){width="1200"}
+
+<br>
+
+![**Image 2.** Hairy Woodpecker](https://cdn.download.ams.birds.cornell.edu/api/v1/asset/68929231/1800){width="1200"} 
+
+<br>
+
+![**Image 3.** Downy Woodpecker](https://travisaudubon.org/home/wp-content/uploads/2018/10/Downy_Woodpecker_Maria_Corcacas_NY10_KK_GBBC.jpg){width="1200"} 
+
+<br>
+
+![**Image 4.** Red-Bellied Woodpecker](https://cdn.download.ams.birds.cornell.edu/api/v1/asset/308673821/1200) 
+
+<br>
+
 # 2) Research Questions
 
 <br> **Question 1:** Is there a visual correlation between the possible explanatory variables (ambient noise, road noise, and hemlock condition) and the detection of woodpecker species in the Delaware Water Gap from 2014-2025?
@@ -41,7 +59,7 @@ Ambient noise levels, the presence of road noise, and the hemlock tree condition
 The data was collected during the months of May and June from 2011-2025. Each park consisted of multiple sites with each site having three point count stations. The sites were sampled repeatedly, typically four times annually. Point counts were conducted for ten minutes each, providing ample data on the bird species detected.Additional environmental factors such as ambient noise, road noise, and hemlock conditions were noted for each individual point count station by date of observation. The ambient noise was recorded in decibels through a handheld sensor, with values between 30-100 (dB). Road noise was recorded as a true or false status, with true denoting that there was evidence from the observer to suggest that road noise was present. Hemlock condition score was assigned by the observer with zero denoting that there was no hemlock trees observed within a 50-meter radius of the point count station. The scale of one to four denoted the health of the hemlocks observed with increasing decay for increased condition score.
 
 | Information    | Description                                                                                                                   |
-|-------------------------|-----------------------------------------------|
+|--------------------------|----------------------------------------------|
 | Data Publisher | Department of the Interior - National Park Service                                                                            |
 | Data Source    | <https://catalog.data.gov/dataset/streamside-bird-monitoring-data-in-eastern-rivers-and-mountains-network-parks-2011-2025-da> |
 | Variables Used | Unit Code, Site Name, Start Date ISO, Ambient Noise, Road Noise, Common Name, Hemlock Condition Score, Latitude, Longitude    |
@@ -243,7 +261,9 @@ Species_over_time <-
 Species_over_time + scale_color_brewer(palette="Dark2")
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 1 graphs the total number of observations of each woodpecker species per year.
+
+<br>
 
 ```{r Scatter Plot of Ambient Noise Over Time, fig.align='center', warning=FALSE, fig.cap="**Figure 2.** Scatter Plot of Ambient Noise Over Time"}
 Noise_over_time <- 
@@ -265,7 +285,9 @@ Noise_over_time + scale_color_brewer(palette="Dark2")
 
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 2 plots all ambient noise values across all sites over time. Values are in decibels.
+
+<br>
 
 ```{r Line Plot of Average Ambient Noise, fig.align='center', warning=FALSE, fig.cap="**Figure 3.** Line Plot of Average Ambient Noise" }
 AverageAmbientPlot <-
@@ -287,7 +309,9 @@ AverageAmbientPlot + scale_color_brewer(palette="Dark2")
 
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 3 graphs the average ambient noise per each year over time, with separate lines for each of the four species.
+
+<br>
 
 ```{r Road Noise True or False, fig.align='center', fig.cap="**Figure 4.** Road Noise Presence or Absence Across All Sites"}
 RoadNoisePlot <- 
@@ -306,7 +330,9 @@ RoadNoisePlot <-
 RoadNoisePlot + scale_fill_brewer(palette="Dark2")
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 4 graphs all sites in regards to the presence of road noise, with different breaks in the bar representing each of the four woodpecker species.
+
+<br>
 
 ```{r Scatter Plot of Hemlock Condition Over Time, warning=FALSE, fig.align='center', fig.cap="**Figure 5.** Scatter Plot of Hemlock Condition Over Time"}
 Hemlock_over_time <-
@@ -327,7 +353,9 @@ Hemlock_over_time + scale_color_brewer(palette="Dark2")
 
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 5 represents the average hemlock condition score across all sites per year, by each of the four species.
+
+<br>
 
 ```{r Comparison of Hemlock Condition and Detection Count, fig.align='center', fig.cap="**Figure 6.** Comparison of Hemlock Condition and Detection Count"}
 HemlockVSDetection <-
@@ -347,11 +375,13 @@ HemlockVSDetection + scale_fill_brewer(palette="Dark2")
 
 ```
 
-<br> <br> <br> <br> <br> <br>
+<br> Figure 6 compares hemlock condition score and the number of detections of each of the four woodpecker species. Visually, a score of three is the most common observation.
+
+<br>
 
 ## 5.2) Mapping Visualizations
 
-<br> After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mapview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site. <br>
+<br> After plotting woodpecker appearance and the explanatory variables over time, our objective was to show the observation sites and frequency of woodpecker observations spatially. To begin, we have provided a mapview object with two layers, one with every observation site in the data, and the other showing each site with a size that varies based on the number of observations recorded at that site. Next, we wanted to provide readers with an understanding of how the explanatory variables differ spatially. As such, we created another mapview object, with layers representing average ambient noise per site, sites with road noise, sites without road noise, and the average hemlock score per site.
 
 ```{r Graph Monitoring Sites}
 # Monitoring Sites
@@ -394,7 +424,7 @@ ObservationPileatedSF <- sites_xy_pileated %>%
 MonitoringSitesPileated <- mapview(ObservationPileatedSF,
         cex = "total_detections",
         col.regions = "slateblue3",
-        layer.name = "Observation Sites of Pileated Woodpeckers by Number of Total Observations",
+        layer.name = "Pileated Woodpeckers",
         legend.opacity = 0.8,
         alpha.regions = 0.6,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
@@ -410,7 +440,7 @@ ObservationRedBelliedSF <- sites_xy_redbellied %>%
 MonitoringSitesRedBellied <- mapview(ObservationRedBelliedSF,
         cex = "total_detections",
         col.regions = "maroon2",
-        layer.name = "Observation Sites of Red-bellied Woodpeckers by Number of Total Observations",
+        layer.name = "Red-bellied Woodpeckers",
         legend.opacity = 0.8,
         alpha.regions = 0.6,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
@@ -426,7 +456,7 @@ ObservationHairySF <- sites_xy_hairy %>%
 MonitoringSitesHairy <- mapview(ObservationHairySF,
         cex = "total_detections",
         col.regions = "darkorange3",
-        layer.name = "Observation Sites of Hairy Woodpeckers by Number of Total Observations",
+        layer.name = "Hairy Woodpeckers",
         legend.opacity = 0.8,
         alpha.regions = 0.6,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
@@ -442,7 +472,7 @@ ObservationDownySF <- sites_xy_downy %>%
 MonitoringSitesDowny <- mapview(ObservationDownySF,
         cex = "total_detections",
         col.regions = "seagreen",
-        layer.name = "Observation Sites of Downy Woodpeckers by Number of Total Observations",
+        layer.name = "Downy Woodpeckers",
         legend.opacity = 0.8,
         alpha.regions = 0.6,
         map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
@@ -458,15 +488,17 @@ BirdSpeciesMap <- MonitoringSitesPileated + MonitoringSitesRedBellied + Monitori
 MonitoringSiteMap
 
 ```
+**Map 1.** Map of All Monitoring Sites in the Delaware Water Gap National Recreation Area
 
-**Map 1.** <br> <br> <br> <br> <br> <br>
+<br>
 
 ```{r Bird Species Map}
 BirdSpeciesMap
 
 ```
+**Map 2.** Map of Observations of the Four Woodpecker Species in the Delaware Water Gap Recreation Area
 
-**Map 2.** <br> <br> <br> <br> <br> <br>
+<br>
 
 ```{r Explanatory Variables Spatially}
 
@@ -503,7 +535,7 @@ Road_Noise_FalseSF <- road_noise_false_XY1 %>%
 MonitoringSitesFalse <- mapview(Road_Noise_FalseSF,
           cex = 4,
           col.regions = "green",
-          layer.name = "Woodpecker Sightings without Road Noise",
+          layer.name = "No Road Noise",
           map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
           
 
@@ -515,7 +547,7 @@ Road_Noise_TrueSF <- road_noise_true_XY1 %>%
 MonitoringSitesTrue <- mapview(Road_Noise_TrueSF,
           cex = 4,
           col.regions = "red",
-          layer.name = "Woodpecker Sightings with Road Noise",
+          layer.name = "Road Noise",
           map.types = c("Esri.NatGeoWorldMap", "CartoDB.Positron", "Esri.WorldImagery"))
  
 ExplanatoryVariableMap <- MonitoringSitesNoise + MonitoringSitesHemlock
@@ -527,15 +559,17 @@ RoadNoiseMap <- MonitoringSitesTrue + MonitoringSitesFalse
 ExplanatoryVariableMap
 
 ```
+**Map 3.** Map of Average Ambient Noise Levels (dB) and Average Hemlock Score Across all Sites
 
-**Map 3.** <br> <br> <br> <br> <br> <br>
+<br>
 
 ```{r Road Noise Map}
 RoadNoiseMap
 
 ```
+**Map 4.** Map of Sites with Observations of Road Noise and Without Road Noise
 
-**Map 4.** <br> <br> <br> <br> <br> <br>
+<br>
 
 # 6) Analysis
 
@@ -566,11 +600,10 @@ TukeyHSD(Hemlock_ANOVA)
 ```{r Plotting ANOVA, echo=FALSE, fig.align='center'}
 plot(Hemlock_ANOVA)
 ```
+
+<br> **Figure 7.** <br> This is because the p-value is 0.0236 which is below the 0.05 threshold. However, when we run a HSD test on the data, there is no significant combination of hemlock condition and woodpeckers spotted that is significant, all of their p-values were above 0.05.
+
 <br>
-**Figure 7.**
-<br>
-This is because the p-value is 0.0236 which is below the 0.05 threshold. However, when we run a HSD test on the data, there is no significant combination of hemlock condition and woodpeckers spotted that is significant, all of their p-values were above 0.05.
-<br> <br> <br> <br> <br> <br>
 
 ```{r singular linear regression for ambient noise, include=FALSE}
 Ambient_Regression <- lm(data = Ambient_Noise, Detection_Count ~ Ambient_Noise)
@@ -580,21 +613,19 @@ summary(Ambient_Regression)
 cor.test(Ambient_Noise$Detection_Count, Ambient_Noise$Ambient_Noise)
 ```
 
-
-```{r plot for ambient noise linear regression, echo=FALSE, fig.align='center'}
+```{r plot for ambient noise linear regression, echo=FALSE, fig.align='center', fig.cap="**Figure 8.** Woodpecker Sightings Based on Ambient Noise Level"}
 ggplot(Ambient_Noise, aes(x = Detection_Count, y = Ambient_Noise)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   labs(title = "Correlation Between Woodpecker Sighting and Ambient Noise",
        x = "Woodpecker Sightings",
-       y = "Ambient Noise")
+       y = "Ambient Noise (dB)")
 
 ```
+
+<br> We can see that our p value is 0.04804 which is below 0.05, meaning that we reject the null hypothesis and accept the alternative. The alternative hypothesis states that the true correlation between our variables is not equal to 0 which is true, the estimated correlation is -0.08991391.
+
 <br>
-**Figure 8.**
-<br>
-We can see that our p value is 0.04804 which is below 0.05, meaning that we reject the null hypothesis and accept the alternative. The alternative hypothesis states that the true correlation between our variables is not equal to 0 which is true, the estimated correlation is -0.08991391.
-<br> <br> <br> <br> <br> <br>
 
 ```{r t-test for road noise, include=FALSE}
 Road_2ttest <- t.test(Road_Noise$Detection_Count ~ Road_Noise$Road_Noise)
@@ -602,8 +633,7 @@ Road_2ttest <- t.test(Road_Noise$Detection_Count ~ Road_Noise$Road_Noise)
 Road_2ttest
 ```
 
-
-```{r graph for t-test for road noise, echo=FALSE, fig.align='center'}
+```{r graph for t-test for road noise, echo=FALSE, fig.align='center', fig.cap="**Figure 9.** Woodpecker Sightings Based on Road Noise"}
 ggplot(Road_Noise, aes(x = Detection_Count, color = as.factor(Road_Noise))) +
   geom_freqpoly() +
   labs(title = "Woodpecker Sightings Based on Road Noise",
@@ -612,18 +642,19 @@ ggplot(Road_Noise, aes(x = Detection_Count, color = as.factor(Road_Noise))) +
        y = "Number of Sites")
 
 ```
+
+<br> The p-value of our t-test was 0.9768 which is well above the threshold of 0.05. The mean of the group with road noise was 1.793478 and the mean of the group without road noise was 1.798206.
+
 <br>
-**Figure 9.**
-<br>
-The p-value of our t-test was 0.9768 which is well above the threshold of 0.05. The mean of the group with road noise was 1.793478 and the mean of the group without road noise was 1.798206.
-<br> <br> <br> <br> <br> <br>
 
 # 7) Summary and Conclusions
 
-While we learned much from our study and are ready to answer our questions, we must acknowledge some discrepancy or potential knowledge gaps in our data and its collection. The data was only collected in the summertime and with site overlap. So we are provided only a small window into what woodpecker populations look like in the Delaware Water Gap National Recreation Area. Along with many sites overlapping, the data collection was also totally reliant on the observers seeing the birds and birds could have been at the site but not seen by the observer. The data collect team also had a limited staff so they were not able to observe every site at the same time as every other site. All of these factors could have lead to sightings being missed or misrepresented in the data. Another factor that could have caused discrepancy is that road noise could be a part of ambient noise at sites, it is not specified if road noise is excluded from ambient noise levels.
+While we learned much from our study and are ready to answer our questions, we must acknowledge some discrepancy or potential knowledge gaps in our data and its collection. The data was only collected in the summertime and with site overlap. So we are provided only a small window into what woodpecker populations look like in the Delaware Water Gap National Recreation Area when they are present year round. Along with many sites overlapping, the data collection was also totally reliant on the observers seeing or hearing the birds and birds could have been at the site but not seen by the observer. The data collection team also had a limited staff so they were not able to observe every site simultaneously. All of these factors could have lead to sightings being missed or misrepresented in the data. Another factor that could have caused discrepancy is that road noise could be a part of ambient noise at sites. It is not specified if road noise is excluded from ambient noise levels.
 
-From the data, we can see that the downy woodpecker is the most common woodpecker species in the area, with Hairy, Pileated, and Red-bellied appearing in slightly lesser levels. There did not appear to be a woodpecker species that appeared at different ambient noise levels, they all appear at relatively the same ambient noise average as every other species every. There was no observable trend and no species was dominate ate different ambient noise levels. There also does not appear to be an observable visual trend in road noise presence in woodpecker sightings. There was a difference in the number of sights that had road noise presence and those that did not. There were many more sites that did not have road noise than ones that did. There is a trend for the hemlock condition score that they prefer. When looking at our graphs we can see that woodpeckers prefer a hemlock score of 3, which are hemlocks that only have green and living branches near the crown and dead branches near the base. These conditions seem to be the most ideal for every woodpecker species.
+From the data, we can see that the downy woodpecker is the most common woodpecker species in the area, with hairy, pileated, and red-bellied appearing in slightly lesser levels. There did not appear to be a woodpecker species that appeared at different ambient noise levels, they all appear at relatively the same ambient noise average as every other species every. There was no observable trend and no species was dominant at different ambient noise levels. There also does not appear to be an observable visual trend in road noise presence in woodpecker sightings. There was a difference in the number of observations that had road noise presence and those that did not. However this could have been attributed to the lack of roads in the near vicinity of many sites. Our graphs determined that there is a observable trend for the preferred hemlock condition. Woodpeckers prefer a hemlock score of 3. A hemlock score of this level indicates that woodpeckers prefer hemlocks with green and living branches near the crown and dead branches near the base. These conditions seem to be the most ideal for every woodpecker species.
 
-There were also observable trends when we examined the spatial extent of woodpecker observations. The Downy Woodpecker seems to occupy the northern part of the recreation area. The Hairy Woodpecker seemed to occupy the north and middle of the area. The Red-bellied Woodpecker appears more in the southern and middle sections of the area. While the Pileated Woodpecker is observed at similar levels all over the area. The sites with the most woodpecker observations are along the middle and the north of the recreation area, the southern areas do not see as many woodpecker sights. Ambient noise levels seem to be fairly even accross the whole recreation area with areas closer to roads and the aiprot having higher average ambient noise levels. Hemlock condition scores also seem to be fairly even across the recreation area. There is a small concentration of poor hemlock condition score within the actual Delaware Water Gap but outside of that there is no other concentration of any score. There is concentrations of site with road noise, they appear to be occuring in several small collections along the highway that cuts through the recreation area.
+There were also observable trends when we examined the spatial extent of woodpecker observations. The downy woodpecker mainly occupies the northern part of the recreation area. The hairy woodpecker seemed to occupy the north and middle of the area. The Red-bellied Woodpecker was seen more in the southern and middle sections of the area. While the pileated woodpecker was present at similar levels all over the area. The sites with the most woodpecker observations are along the middle and the north of the recreation area, the southern areas do not see as many woodpecker sights. Ambient noise levels seem to be fairly even across the whole recreation area, with areas closer to roads and the airport having higher average ambient noise levels. There is concentrations of site with road noise, they appear to be occurring in several small collections along the highway that cuts through the recreation area. Hemlock condition scores also seem to be fairly evenly distributed across the recreation area. There is a small concentration of poor hemlock condition score within the actual Delaware Water Gap, but outside of that, there is no other concentration of any specific score.
 
-When we examined our data statistically, we were able to draw conclusions about what explanatory variable is significant to woodpecker sightings. When we ran our ANOVA test on hemlock condition socre, the p value was below 0.05 which proves that hemlock condition score is an explanatory variable. When we got the results of our singular linear regression on ambient noise, the p value was also below 0.05 which means we must accept the alternative hypothesis. What this hypothesis states is that the correlation between woodpecker sightings and ambient noise levels are correlated. This correlation between woodpecker sightings and ambient noise level is an inverse relationship. As ambient noise levels rise, the amount of woodpecker sightings decreases, but only slightly, our correlation is not that much lower than 0 so it is not a dramatic drop off as ambient noise increases. When we analyzed the affects of road noise on woodpecker sightings, the p-value was well above 0.05. This means that we cannot reject our null hypothesis which states that there is no difference in the mean between the road noise and no road noise groups. The difference is incredibly small so it make sense that the t test confirmed there is no relationship. So woodpecker sightings and road noise are not correlated and you are just as likely to find woodpeckers in areas with road noise than in places without road noise.
+When we examined our data statistically, we were able to draw conclusions about what explanatory variable is significant to woodpecker sightings. When we ran our ANOVA test for hemlock condition score it returned a p value below 0.05, which proves that hemlock condition score is an explanatory variable. The results of our singular linear regression indicated a p value below 0.05, which means we must accept the alternative hypothesis. The alternative hypothesis states that the correlation between woodpecker sightings and ambient noise levels are correlated inversely. Rising ambient noise levels slightly decrease the number of woodpecker sightings. This is due to the fact that our correlation is not much lower than 0. When we analyzed the effects of road noise on woodpecker sightings, the p-value was well above 0.05. This means that we fail to reject our null hypothesis, meaning there is no difference in the average number of observations between road noise and no road noise groups. The difference between these two groups is incredibly small, further backing up the results of the t-test. Overall the results of this test indicate that there is no correlation between woodpecker sightings and road noise.
+
+For future consideration, we would advise that when ambient noise observations are being made, it would be insightful to specify if road noise was considered a part of the ambient noise level. A larger observation staff to observe the sites year round would also be more beneficial, as all four species are non-migratory. Finally, the site locations could be more evenly distributed across the recreation area, so that they do not overlap.
